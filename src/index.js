@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 // import './index.css';
 import {ApolloProvider} from '@apollo/client';
 import { ApolloClient, HttpLink, InMemoryCache } from '@apollo/client';
+import Courts from './Courts';
 
 //The constructor for ApolloClient accepts an ApolloClientOptions object that supports the required and optional fields listed below. These fields make it easy to customize how Apollo works based on your application's needs. (https://www.apollographql.com/docs/react/api/apollo-client/#gatsby-focus-wrapper)
 const client = new ApolloClient({
@@ -17,9 +18,7 @@ const client = new ApolloClient({
 const App = () => {
   return(
     <ApolloProvider client={client}>
-      <div>
-        <h2>React basketball court yelp app</h2>
-      </div>
+      <Courts />
   </ApolloProvider>
   )
 }
