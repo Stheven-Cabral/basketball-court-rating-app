@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 // import './index.css';
-import {ApolloProvider} from '@apollo/client';
+import { ApolloProvider } from '@apollo/client';
 import { ApolloClient, HttpLink, InMemoryCache } from '@apollo/client';
 import Courts from './components/Courts';
 
@@ -11,7 +11,7 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
   //By default, Apollo Client uses Apollo Link's HttpLink to send GraphQL operations to a remote server over HTTP. Apollo Client takes care of creating this default link.
   link: new HttpLink({
-    url: 'https://basketball-court-rating-app.herokuapp.com/console/api-explorer',
+    uri: 'https://basketball-court-rating-app.herokuapp.com/v1/graphql',
   })
 });
 
