@@ -13,10 +13,10 @@ export const ListItem = styled.li`
   padding: 25px 30px;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-top-width: 0px;
-  &:first-child {
+  &:first-of-type {
     border-top-width: 1px;
   }
-  &:first-child {
+  &:first-of-type {
     border-top-left-radius: 0.25rem;
     border-top-right-radius: 0.25rem;
   }
