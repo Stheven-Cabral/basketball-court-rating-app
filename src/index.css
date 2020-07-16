@@ -1,21 +1,18 @@
-html {
-  font-size: 1.5rem;
-}
-
 body {
   font-family: 'Anton', 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin: 2rem;
+  font-size: 1.75rem;
+  margin-top: 100px;
   display: flex;
   justify-content: center;
 }
 
 .location {
   margin: 0px;
-  font-size: 0.75rem;
+  font-size: 1rem;
 }
 
 code {
