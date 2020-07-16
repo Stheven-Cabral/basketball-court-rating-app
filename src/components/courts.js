@@ -12,7 +12,7 @@ const COURTS = gql`
       location
       backboardMaterial
       rimType
-      indoor
+      environment
     }
   }
 `;
@@ -25,9 +25,10 @@ export default function Courts() {
 
   return(
     <List>
-      {data.basketball_courts.map(({id, courtName, location, backboardMaterial, rimType, indoor}) => (
+      {data.basketball_courts.map(({id, courtName, location, environment}) => (
         <ListItem key={id}>
-          {courtName} | {location} | {backboardMaterial} | {rimType} <Badge>{`hello`}</Badge>
+          {courtName}<Badge>{environment}</Badge>
+          <p className="location">{location}</p>
         </ListItem>
       ))}
     </List>
