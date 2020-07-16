@@ -6,6 +6,7 @@ export const Badge = styled.span`
   padding: 0.25rem 0.75rem;
   background-color: grey;
   font-size: 1rem;
+  color: white;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
