@@ -1,3 +1,8 @@
+.nav {
+  margin-block-start: 0px;
+  background-color: maroon;
+}
+
 body {
   font-family: 'Anton', 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -6,8 +11,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-size: 1.75rem;
   margin-top: 100px;
-  display: flex;
-  justify-content: center;
 }
 
 .location {
