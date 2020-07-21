@@ -9,14 +9,13 @@ export const SearchBackground = styled.div`
 
 export const Input = styled.input`
   margin: auto;
-  margin-top: 5rem;
   margin-bottom: 2rem;
   height: 40px;
   width: 100%;
   max-width: 600px;
   padding: 0.5rem 1rem;
   font-size: 1.5rem;
-  line-height: 1.5;
+  line-height: 1.5rem;
   border-radius: 0.3rem;
   display: block;
   background-color: #fff;

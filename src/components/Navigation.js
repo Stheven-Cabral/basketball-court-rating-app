@@ -8,7 +8,6 @@ const NavBar = styled.div`
 
 const NavLogo = styled.h3`
   display: inline-block;
-  height: 60px;
   line-height: 60px;
   margin-block-start: 0px;
   margin-block-end: 0px;
