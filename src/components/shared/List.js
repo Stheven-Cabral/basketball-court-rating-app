@@ -27,3 +27,8 @@ export const ListItem = styled.li`
   color: black;
   list-style-type: none;
 `;
+
+export const Location = styled.p`
+  margin: 0px;
+  font-size: 1rem;
+`;

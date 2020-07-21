@@ -1,7 +1,7 @@
 import React from 'react';
 import { useQuery, gql } from '@apollo/client';
 import { Badge } from './shared/Badge';
-import { List, ListItem } from './shared/List'; 
+import { List, ListItem, Location } from './shared/List'; 
 
 // In the case of GraphQL, the gql tag is used to surround GraphQL operation and schema language (which are represented as Strings or template literals), and makes it easier to differentiate from ordinary strings.
 const COURTS = gql`
@@ -28,7 +28,7 @@ export default function Courts() {
       {data.basketball_courts.map(({id, courtName, location, environment}) => (
         <ListItem key={id}>
           {courtName}<Badge>{environment}</Badge>
-          <p className="location">{location}</p>
+          <Location className="location">{location}</Location>
         </ListItem>
       ))}
     </List>

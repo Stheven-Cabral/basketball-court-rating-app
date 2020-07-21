@@ -14,11 +14,6 @@ body {
   margin: 0;
 }
 
-.location {
-  margin: 0px;
-  font-size: 1rem;
-}
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
