@@ -12,19 +12,20 @@ export const SearchBackground = styled.div`
 `;
 
 export const Input = styled.input`
+  display: block;
   margin: auto;
   margin-top: 2rem;
   margin-bottom: 2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
   height: 50px;
   width: 100%;
   max-width: 600px;
-  padding: 0.5rem 1rem;
-  font-size: 1.5rem;
-  line-height: 1.5rem;
-  border-radius: 0.3rem;
-  display: block;
   background-color: #fff;
   border: 1px solid #ced4da;
+  box-shadow: 4px 4px 10px black;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
 `;
 
 export const Button = styled.button`
