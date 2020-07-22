@@ -4,13 +4,18 @@ import CourtImage from '../../assets/images/court.jpg';
 export const SearchBackground = styled.div`
   background-image: url(${CourtImage});
   background-color: grey;
-  height: 600px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const Input = styled.input`
   margin: auto;
+  margin-top: 2rem;
   margin-bottom: 2rem;
-  height: 40px;
+  height: 50px;
   width: 100%;
   max-width: 600px;
   padding: 0.5rem 1rem;
@@ -24,6 +29,8 @@ export const Input = styled.input`
 
 export const Button = styled.button`
   margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
   color: #fff;
   background-color: #750000;
   border-color: #007bff;

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import {SearchBackground, Input, Button} from './shared/SearchForm';
+import {SearchBackground, Input, Button} from './shared/Form';
 
-export default class Search extends Component {
+export default class SearchForm extends Component {
 
 
   render() {
