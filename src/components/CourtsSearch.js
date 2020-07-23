@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import SearchForm from './components/SearchForm';
-import Courts from './components/Courts';
+import SearchForm from './SearchForm';
+import Courts from './Courts';
 
 export default class CourtsSearch extends Component {
   state = {

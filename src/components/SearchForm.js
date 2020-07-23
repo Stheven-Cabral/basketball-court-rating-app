@@ -7,8 +7,8 @@ export default class SearchForm extends Component {
   render() {
     return(
       <SearchBackground>
-        <Input type="text" id="search" name="search"/>
-        <Button type="submit">Search</Button>
+        <Input value = {this.props.inputValue} onChange = {this.props.onChange} type="text" id="search" name="search"/>
+        <Button onClick={this.props.onSearch} type="submit">Search</Button>
       </SearchBackground>
     )
   }
