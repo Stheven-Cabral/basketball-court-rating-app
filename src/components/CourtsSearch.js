@@ -1,20 +1,19 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
+import { useLazyQuery, gql } from '@apollo/client';
 import SearchForm from './SearchForm';
 import Courts from './Courts';
 
 const SEARCH = gql``;
 
-export default class CourtsSearch extends Component {
-  state = {
-    inputValue: ''
-  }
+const CourtsSearch = () => {
+  const [inputValue, setInputValue] = useState('');
 
-  render() {
-    return(
-      <div>
-        <SearchForm />
-        <Courts />
-      </div>
-    )
-  }
+  return(
+    <div>
+      <SearchForm />
+      <Courts />
+    </div>
+  )
 }
+
+export default CourtsSearch;
