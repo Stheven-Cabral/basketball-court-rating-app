@@ -17,11 +17,17 @@ const COURTS = gql`
   }
 `;
 
-export default function Courts() {
+const Courts = (props) => {
   const { loading, error, data } = useQuery(COURTS);
+  const searchedPlants = props.searchedPlanets;
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
+
+  const renderCourts = (courts) => {
+    
+  }
+
 
   return(
     <List>
@@ -34,3 +40,5 @@ export default function Courts() {
     </List>
   )
 }
+
+export default Courts;
