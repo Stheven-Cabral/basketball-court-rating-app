@@ -25,19 +25,17 @@ const Courts = (props) => {
   if (error) return <p>Error :(</p>;
 
   const renderCourts = (courts) => {
-    
+    return courts.map(({id, courtName, location, environment}) => (
+      <ListItem key={id}>
+        {courtName}<Badge>{environment}</Badge>
+        <Location className="location">{location}</Location>
+      </ListItem>
+    ));
   }
 
 
   return(
-    <List>
-      {data.basketball_courts.map(({id, courtName, location, environment}) => (
-        <ListItem key={id}>
-          {courtName}<Badge>{environment}</Badge>
-          <Location className="location">{location}</Location>
-        </ListItem>
-      ))}
-    </List>
+    <List>{renderCourts(searchedPlants || data.basketball_courts)}</List>
   )
 }
 
