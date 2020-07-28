@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {SearchBackground, Input, Button} from './shared/Form';
 
 const SearchForm = ({ inputValue, onChange, onSearch }) => {
