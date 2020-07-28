@@ -33,7 +33,6 @@ const Courts = (props) => {
     ));
   }
 
-
   return(
     <List>{renderCourts(searchedPlants || data.basketball_courts)}</List>
   )

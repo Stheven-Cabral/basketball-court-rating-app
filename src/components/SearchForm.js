@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
 import {SearchBackground, Input, Button} from './shared/Form';
 
-export default class SearchForm extends Component {
+const SearchForm = ({ inputValue, onChange, onSearch }) => {
 
-
-  render() {
-    return(
-      <SearchBackground>
-        <Input value = {this.props.inputValue} onChange = {this.props.onChange} type="text" id="search" name="search"/>
-        <Button onClick = {this.props.onSearch} type="submit">Search</Button>
-      </SearchBackground>
-    )
-  }
+  return(
+    <SearchBackground>
+      <Input value = {inputValue} onChange = {onChange} type="text" id="search" name="search"/>
+      <Button onClick = {onSearch} type="submit">Search</Button>
+    </SearchBackground>
+)
 }
+
+export default SearchForm;
 
