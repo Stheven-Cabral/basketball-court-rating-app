@@ -8,7 +8,7 @@ const SearchForm = ({ inputValue, onChange, onSearch }) => {
       <Input value = {inputValue} onChange = {onChange} type="text" id="search" name="search"/>
       <Button onClick = {onSearch} type="submit">Search</Button>
     </SearchBackground>
-)
+  )
 }
 
 export default SearchForm;

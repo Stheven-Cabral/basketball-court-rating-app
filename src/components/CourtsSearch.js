@@ -18,10 +18,17 @@ const SEARCH = gql`
 
 const CourtsSearch = () => {
   const [inputValue, setInputValue] = useState('');
+  const [search, { loading, error, data }] = useLazyQuery(SEARCH);
 
   return(
     <div>
-      <SearchForm />
+      <SearchForm 
+        inputValue = {inputValue}
+        onChange = {(e) => {setInputValue.target.value}}
+        onSearch = {() => search({
+          variables: {match: `%${inputValue}%`}
+        })}
+      />
       <Courts />
     </div>
   )
