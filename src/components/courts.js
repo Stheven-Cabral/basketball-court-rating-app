@@ -6,7 +6,7 @@ import { List, ListItem, Location } from './shared/List';
 // In the case of GraphQL, the gql tag is used to surround GraphQL operation and schema language (which are represented as Strings or template literals), and makes it easier to differentiate from ordinary strings.
 const COURTS = gql`
   {
-    basketball_courts {
+    courts {
       id
       courtName
       location

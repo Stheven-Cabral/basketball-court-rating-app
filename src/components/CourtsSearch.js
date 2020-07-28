@@ -5,7 +5,7 @@ import Courts from './Courts';
 
 const SEARCH = gql`
   query Search ($match: String) {
-    basketball_courts(where: {courtName: {_ilike: $match}}, order_by: {courtName: asc}) {
+    courts(where: {courtName: {_ilike: $match}}, order_by: {courtName: asc}) {
       id
       courtName
       location
