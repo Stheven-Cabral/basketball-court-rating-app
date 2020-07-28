@@ -29,7 +29,7 @@ const CourtsSearch = () => {
           variables: {match: `%${inputValue}%`}
         })}
       />
-      <Courts searchedPlanets = {data ? data.basketball_courts : null}/>
+      <Courts searchedPlanets = {data ? data.courts : null}/>
     </div>
   )
 }

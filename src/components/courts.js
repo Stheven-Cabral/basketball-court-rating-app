@@ -34,7 +34,7 @@ const Courts = (props) => {
   }
 
   return(
-    <List>{renderCourts(searchedPlants || data.basketball_courts)}</List>
+    <List>{renderCourts(searchedPlants || data.courts)}</List>
   )
 }
 
