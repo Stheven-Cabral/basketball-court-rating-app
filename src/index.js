@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import { ApolloProvider } from '@apollo/client';
 import { ApolloClient, HttpLink, InMemoryCache } from '@apollo/client';
-import {BrowserRouter, Switch, Route } from 'react-router-dom';
+import {BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import CourtsSearch from './components/CourtsSearch';
 
