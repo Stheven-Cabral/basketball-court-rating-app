@@ -19,10 +19,14 @@ const client = new ApolloClient({
 
 const App = () => {
   return(
-    <ApolloProvider client={client}>
-      <Navigation />
-      <CourtsSearch />
-  </ApolloProvider>
+    <BrowserRouter>
+      <ApolloProvider client={client}>
+        <Navigation />
+        <Switch>
+          
+        </Switch>
+      </ApolloProvider>
+    </BrowserRouter>
   )
 }
 
