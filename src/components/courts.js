@@ -20,6 +20,7 @@ const COURTS = gql`
 const Courts = (props) => {
   const { loading, error, data } = useQuery(COURTS);
   const searchedPlants = props.searchedPlanets;
+  console.log(props);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
