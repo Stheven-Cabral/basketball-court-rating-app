@@ -24,7 +24,7 @@ const App = () => {
       <ApolloProvider client={client}>
         <Navigation />
         <Switch>
-          <Route path="/planet/:id" component={Court} />
+          <Route path="/court/:id" component={Court} />
           <Route path="/" component={CourtsSearch} />
         </Switch>
       </ApolloProvider>
