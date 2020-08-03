@@ -22,10 +22,28 @@ const COURT = gql`
 
 const Court = (props) => {
   const id = props.match.params.id;
-  const { loading, error, data } = useQuery(Court, {variables: { id }});
+  const { loading, error, data } = useQuery(COURT, {variables: { id }});
 
   if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error :(</p>;
+  if (error) return <p>Error...</p>;
+  
+  const { courtName, location, backboardMaterial, rimType, environment, court_reviews } = data.courts_by_pk;
+
+  return (
+    <div>
+      <h3>
+        {courtName} <Badge>{environment}</Badge>
+      </h3>
+      <h4>{location}</h4>
+      <h5>{backboardMaterial}</h5>
+      <h5>{rimType}</h5>
+      <List>
+        {court_reviews.map((review) => (
+          <ListItem key={review.id}>{review.body}</ListItem>
+        ))}
+      </List>
+    </div>
+  );
 }
 
 export default Court;
