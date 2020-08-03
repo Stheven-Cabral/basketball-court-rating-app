@@ -20,7 +20,7 @@ const client = new ApolloClient({
 
 const App = () => {
   return(
-    <BrowserRouter>
+    <Router>
       <ApolloProvider client={client}>
         <Navigation />
         <Switch>
@@ -28,7 +28,7 @@ const App = () => {
           <Route path="/" component={CourtsSearch} />
         </Switch>
       </ApolloProvider>
-    </BrowserRouter>
+    </Router>
   )
 }
 
