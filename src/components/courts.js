@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useQuery, gql } from '@apollo/client';
 import { Badge } from './shared/Badge';
 import { List, ListItem, Location } from './shared/List'; 
@@ -27,9 +28,12 @@ const Courts = (props) => {
 
   const renderCourts = (courts) => {
     return courts.map(({id, courtName, location, environment}) => (
+
       <ListItem key={id}>
-        {courtName}<Badge>{environment}</Badge>
-        <Location className="location">{location}</Location>
+        <Link>
+          {courtName}<Badge>{environment}</Badge>
+          <Location className="location">{location}</Location>
+        </Link>
       </ListItem>
     ));
   }
