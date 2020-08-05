@@ -30,7 +30,7 @@ const Courts = (props) => {
     return courts.map(({id, courtName, location, environment}) => (
 
       <ListItem key={id}>
-        <Link>
+        <Link to={`/court/${id}`}>
           {courtName}<Badge>{environment}</Badge>
           <Location className="location">{location}</Location>
         </Link>
