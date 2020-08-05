@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import { ApolloProvider } from '@apollo/client';
 import { ApolloClient, HttpLink, InMemoryCache } from '@apollo/client';
+import { WebSocketLink } from '@apollo/client/link/ws';
 import {BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import CourtsSearch from './components/CourtsSearch';
@@ -16,6 +17,14 @@ const client = new ApolloClient({
   link: new HttpLink({
     uri: 'https://basketball-court-rating-app.herokuapp.com/v1/graphql',
   })
+});
+
+// Create web sockets for subscriptions.
+const wsLink = new WebSocketLink({
+  uri: `https://basketball-court-rating-app.herokuapp.com/v1/graphql`,
+  options: {
+    reconnect: true
+  }
 });
 
 const App = () => {
