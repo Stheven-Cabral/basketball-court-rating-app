@@ -31,13 +31,13 @@ const Court = (props) => {
 
   return (
     <div>
-      <h3>
-        {courtName} <Badge>{environment}</Badge>
-      </h3>
-      <h4>{location}</h4>
-      <h5>{backboardMaterial}</h5>
-      <h5>{rimType}</h5>
       <List>
+        <h3>
+          {courtName} <Badge>{environment}</Badge>
+        </h3>
+        <h4>{location}</h4>
+        <h5>{backboardMaterial}</h5>
+        <h5>{rimType}</h5>
         {court_reviews.map((review) => (
           <ListItem key={review.id}>{review.body}</ListItem>
         ))}

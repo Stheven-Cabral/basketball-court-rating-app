@@ -35,6 +35,7 @@ export const Location = styled.p`
 `;
 
 export const ListItemWithLink = styled.li`
+  text-decoration: none;
   display: block;
   > a {
     display: block;
