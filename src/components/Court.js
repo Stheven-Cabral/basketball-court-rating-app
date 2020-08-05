@@ -1,10 +1,10 @@
 import React from 'react';
-import {useQuery, gql} from '@apollo/client';
+import {useSubscription, gql} from '@apollo/client';
 import {List, ListItem} from './shared/List';
 import {Badge} from './shared/Badge';
 
 const COURT = gql`
-  query Court($id: uuid!) {
+  subscription Court($id: uuid!) {
     courts_by_pk(id: $id) {
       id
       courtName
@@ -22,7 +22,7 @@ const COURT = gql`
 
 const Court = (props) => {
   const id = props.match.params.id;
-  const { loading, error, data } = useQuery(COURT, {variables: { id }});
+  const { loading, error, data } = useSubscription(COURT, {variables: { id }});
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error...</p>;
