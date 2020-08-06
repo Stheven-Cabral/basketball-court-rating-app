@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {useSubscription, gql} from '@apollo/client';
 import {List, ListItem} from './shared/List';
 import {Badge} from './shared/Badge';
@@ -23,6 +23,7 @@ const COURT = gql`
 
 const Court = (props) => {
   const id = props.match.params.id;
+  const [inputValue, setInputValue] = useState('');  
   const { loading, error, data } = useSubscription(COURT, {variables: { id }});
 
   if (loading) return <p>Loading...</p>;
@@ -35,9 +36,7 @@ const Court = (props) => {
       <ReviewForm 
         inputValue = {inputValue}
         onChange = {(e) => {setInputValue(e.target.value)}}
-        onSearch = {() => search({
-          variables: {match: `%${inputValue}%`}
-        })}
+        // onSearch = {() => ()}
         buttonText = "Submit"
       />
       <List>

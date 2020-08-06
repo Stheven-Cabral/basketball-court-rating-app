@@ -14,7 +14,7 @@ export const ReviewForm = ({ inputValue, onChange, onSearch, buttonText }) => {
   return(
     <Container>
       <Input value={inputValue} onChange={onChange}/>
-      <Button onClick={onSearch}>{ buttonText || "Search"}</Button>
+      <Button onClick={onSearch}>{buttonText}</Button>
     </Container>
   )
 };
