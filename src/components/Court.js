@@ -2,6 +2,7 @@ import React from 'react';
 import {useSubscription, gql} from '@apollo/client';
 import {List, ListItem} from './shared/List';
 import {Badge} from './shared/Badge';
+import {ReviewForm} from './shared/ReviewForm';
 
 const COURT = gql`
   subscription Court($id: uuid!) {
@@ -31,6 +32,14 @@ const Court = (props) => {
 
   return (
     <div>
+      <ReviewForm 
+        inputValue = {inputValue}
+        onChange = {(e) => {setInputValue(e.target.value)}}
+        onSearch = {() => search({
+          variables: {match: `%${inputValue}%`}
+        })}
+        buttonText = "Submit"
+      />
       <List>
         <h3>
           {courtName} <Badge>{environment}</Badge>
