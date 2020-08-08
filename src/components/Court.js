@@ -23,7 +23,11 @@ const COURT = gql`
 `;
 
 const ADD_REVIEW = gql`
-
+  mutation MyMutation ($body: String!, $id: uuid!) {
+    AddReview(body: $body, id: $id) {
+      affected_rows
+    }
+  }
 `;
 
 const Court = (props) => {
