@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {useSubscription, gql} from '@apollo/client';
+import {useSubscription, useMutation, gql} from '@apollo/client';
 import {List, ListItem} from './shared/List';
 import {Badge} from './shared/Badge';
 import {ReviewForm} from './shared/ReviewForm';
@@ -13,13 +13,17 @@ const COURT = gql`
       backboardMaterial
       rimType
       environment
-      court_reviews(order_by: {created_at: asc}) {
+      court_reviews(order_by: {created_at: desc}) {
         id
         body
         created_at
       }
     }
   }
+`;
+
+const ADD_REVIEW = gql`
+
 `;
 
 const Court = (props) => {
