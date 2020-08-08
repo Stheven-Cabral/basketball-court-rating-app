@@ -34,6 +34,7 @@ const Court = (props) => {
   const id = props.match.params.id;
   const [inputValue, setInputValue] = useState('');  
   const { loading, error, data } = useSubscription(COURT, {variables: { id }});
+  const [addReview] = useMutation(ADD_REVIEW);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error...</p>;
@@ -45,7 +46,13 @@ const Court = (props) => {
       <ReviewForm 
         inputValue = {inputValue}
         onChange = {(e) => {setInputValue(e.target.value)}}
-        // onSearch = {() => ()}
+        onSearch = {() => {
+          addReview({ variables: { id: id, body: inputValue } })
+            .then(() => setInputValue(""))
+            .catch((e) => {
+              setInputValue(e.message);
+          });
+        }}
         buttonText = "Submit"
       />
       <List>
