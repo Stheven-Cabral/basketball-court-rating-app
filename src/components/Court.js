@@ -13,9 +13,10 @@ const COURT = gql`
       backboardMaterial
       rimType
       environment
-      court_reviews {
+      court_reviews(order_by: {created_at: asc}) {
         id
         body
+        created_at
       }
     }
   }
