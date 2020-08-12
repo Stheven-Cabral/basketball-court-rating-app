@@ -23,7 +23,7 @@ export const Input = styled.input`
   max-width: 600px;
   background-color: #fff;
   border: 1px solid #ced4da;
-  box-shadow: 4px 4px 10px black;
+  box-shadow: 0px 0px 40px #000;
   font-size: 1.5rem;
   line-height: 1.5rem;
 `;

@@ -12,12 +12,15 @@ const SignUp = styled.span`
   float: right;
   margin-right: 15%;
   margin-left: 25px;
-  align-items: center;
+  line-height: 70px;
+  font-size: 0.75em;
 `;
 
 const Login = styled.span`
   color: black;
   float: right;
+  line-height: 70px;
+  font-size: 0.75em;
 `;
 
 const Navigation = () => {
