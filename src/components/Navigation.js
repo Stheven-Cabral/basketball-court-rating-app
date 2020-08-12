@@ -4,18 +4,19 @@ import { Link } from 'react-router-dom';
 
 const NavBar = styled.div`
   height: 70px;
-  background-color: maroon;
+  background-color: marshmellow;
 `;
 
 const SignUp = styled.span`
-  color: lightgrey;
+  color: black;
   float: right;
-  margin-right: 15px;
+  margin-right: 15%;
   margin-left: 25px;
+  align-items: center;
 `;
 
 const Login = styled.span`
-  color: lightgrey;
+  color: black;
   float: right;
 `;
 
