@@ -4,7 +4,7 @@ import CourtImage from '../../assets/images/court.jpg';
 export const SearchBackground = styled.div`
   background-image: url(${CourtImage});
   background-color: grey;
-  height: 500px;
+  height: 450px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,17 +18,19 @@ export const Input = styled.input`
   margin-bottom: 2rem;
   padding: 0.5rem 1rem;
   border-radius: 0.3rem;
-  height: 50px;
+  height: 45px;
   width: 100%;
   max-width: 600px;
   background-color: #fff;
-  border: 1px solid #ced4da;
-  box-shadow: 0px 0px 40px #000;
+  border: 0px;
   font-size: 1.5rem;
   line-height: 1.5rem;
 `;
 
 export const Button = styled.button`
+  font-family: 'Anton', 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
   margin: auto;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -47,10 +49,8 @@ export const Button = styled.button`
   &:hover {
     cursor: pointer;
     background-color: #008080;
-    border-color: black;
   }
   &:active {
     background-color: #0062cc;
-    border-color: #005cbf;
   }
 `;
