@@ -7,10 +7,12 @@ import Navigation from './components/Navigation';
 import CourtsSearch from './components/CourtsSearch';
 import Court from './components/Court';
 
-  //By default, Apollo Client uses Apollo Link's HttpLink to send GraphQL operations to a remote server over HTTP. Apollo Client takes care of creating this default link.
+
+//By default, Apollo Client uses Apollo Link's HttpLink to send GraphQL operations to a remote server over HTTP. Apollo Client takes care of creating this default link.
 const httpLink = new HttpLink({
   uri: `https://basketball-court-rating-app.herokuapp.com/v1/graphql`,
 });
+
 
 // Create web sockets for subscriptions.
 const wsLink = new WebSocketLink({
@@ -19,6 +21,7 @@ const wsLink = new WebSocketLink({
     reconnect: true
   }
 });
+
 
 // splitLink method to split connections between subscriptions vs queries and mutations.
 const splitLink = split(
@@ -33,12 +36,14 @@ const splitLink = split(
   httpLink,
 );
 
+
 //The constructor for ApolloClient accepts an ApolloClientOptions object that supports the required and optional fields listed below. These fields make it easy to customize how Apollo works based on your application's needs. (https://www.apollographql.com/docs/react/api/apollo-client/#gatsby-focus-wrapper)
 const client = new ApolloClient({
   //Caching is the term for storing reusable responses in order to make subsequent requests faster. ... Subsequent requests for cached content can then be fulfilled from a cache closer to the user instead of sending the request all the way back to the web server.
   cache: new InMemoryCache(),
   link: splitLink
 });
+
 
 const App = () => {
   return(
@@ -53,5 +58,6 @@ const App = () => {
     </Router>
   )
 }
+
 
 export default App;
