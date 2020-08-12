@@ -28,9 +28,7 @@ export const Input = styled.input`
 `;
 
 export const Button = styled.button`
-  font-family: 'Anton', 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
   margin: auto;
   margin-top: 10px;
   margin-bottom: 10px;

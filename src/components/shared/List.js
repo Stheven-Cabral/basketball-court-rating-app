@@ -41,7 +41,7 @@ export const ListItemWithLink = styled.li`
     display: block;
     background-color: #fff;
     margin: 2.5rem;
-    padding: 3rem 5rem;
+    padding: 5rem 5rem;
     border: 1px solid rgba(0, 0, 0, 0.125);
     ${'' /* border-top-width: 0; */}
     &:hover {
