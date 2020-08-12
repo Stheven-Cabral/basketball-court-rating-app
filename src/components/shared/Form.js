@@ -44,6 +44,7 @@ export const Button = styled.button`
   padding: 0.5rem 1rem;
   font-size: 1.5rem;
   height: 50px;
+  width: 175px;
   border-radius: 0.25rem;
   user-select: none;
   &:hover {

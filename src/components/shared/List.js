@@ -40,9 +40,10 @@ export const ListItemWithLink = styled.li`
   > a {
     display: block;
     background-color: #fff;
+    margin: 2.5rem;
     padding: 3rem 5rem;
     border: 1px solid rgba(0, 0, 0, 0.125);
-    border-top-width: 0;
+    ${'' /* border-top-width: 0; */}
     &:hover {
       color: #fff;
       background-color: #bababa;
@@ -50,7 +51,7 @@ export const ListItemWithLink = styled.li`
       cursor: pointer;
     }
   }
-  &:first-of-type {
+  ${'' /* &:first-of-type {
     a {
       border-top-width: 1px;
       border-top-left-radius: 0.25rem;
@@ -62,6 +63,6 @@ export const ListItemWithLink = styled.li`
       border-bottom-right-radius: 0.25rem;
       border-bottom-left-radius: 0.25rem;
     }
-  }
+  } */}
 
 `;
