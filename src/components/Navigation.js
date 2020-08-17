@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 
 const NavBar = styled.div`
-  height: 90px;
+  height: 100px;
   background-color: marshmellow;
   text-align: center;
 `;
