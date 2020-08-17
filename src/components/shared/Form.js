@@ -11,6 +11,16 @@ export const SearchBackground = styled.div`
   justify-content: center;
 `;
 
+export const ReviewBackground = styled.div`
+  background-image: url(${CourtImage});
+  background-color: grey;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+
 export const Input = styled.input`
   display: block;
   margin: auto;

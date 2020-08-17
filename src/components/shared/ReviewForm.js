@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "@emotion/styled";
-import { Input, Button } from './Form';
+import { Input, Button, ReviewBackground } from './Form';
 
 export const Container = styled.div`
   display: flex;
@@ -12,10 +12,10 @@ export const Container = styled.div`
 
 export const ReviewForm = ({ inputValue, onChange, onSearch, buttonText }) => {
   return(
-    <Container>
-      <Input value={inputValue} onChange={onChange}/>
+    <ReviewBackground>
+      <Input value={inputValue} onChange={onChange} />
       <Button onClick={onSearch}>{buttonText}</Button>
-    </Container>
+    </ReviewBackground>
   )
 };
 
