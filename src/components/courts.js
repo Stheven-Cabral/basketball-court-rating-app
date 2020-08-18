@@ -36,7 +36,7 @@ const Courts = (props) => {
       </ListItemWithLink>
     ));
   }
-
+  
   return(
     <List>{renderCourts(searchedPlants || data.courts)}</List>
   )

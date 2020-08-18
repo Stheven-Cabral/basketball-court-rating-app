@@ -1,14 +1,16 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import {SearchBackground, Input, Button} from './shared/Form';
 
 const SearchForm = (props) => {
   const inputValue = props.inputValue;
   const onChange = props.onChange;
   const onSearch = props.onSearch;
+  let history = useHistory();
 
   function newCourt() {
-    console.log(props.history);
-    props.history.push('courses/new');
+    console.log(history);
+    history.push('courts/new');
   }
   return(
     <SearchBackground>
