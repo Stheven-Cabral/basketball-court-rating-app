@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-export const Badge = styled.span`
+export const Badge = styled.div`
   display: inline-block;
   margin: 0rem 1rem;
   padding: 0.25rem 0.75rem;

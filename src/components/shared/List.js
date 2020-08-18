@@ -1,12 +1,11 @@
 import styled from "@emotion/styled";
 
 export const List = styled.ul`
-  padding: 0px 50px;
-  margin: auto;
-  margin-top: 100px;
-  max-width: 600px;
   display: flex;
-  flex-direction: column;
+  padding-left: 0px;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
 `;
 
 export const ListItem = styled.li`
@@ -14,17 +13,7 @@ export const ListItem = styled.li`
   padding: 25px 30px;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-top-width: 0px;
-  &:first-of-type {
-    border-top-width: 1px;
-  }
-  &:first-of-type {
-    border-top-left-radius: 0.25rem;
-    border-top-right-radius: 0.25rem;
-  }
-  &:last-child {
-    border-bottom-left-radius: 0.25rem;
-    border-bottom-right-radius: 0.25rem;
-  }
+  border-radius: 0.25rem;
   color: black;
   list-style-type: none;
 `;
@@ -35,15 +24,19 @@ export const Location = styled.p`
 `;
 
 export const ListItemWithLink = styled.li`
-  text-decoration: none;
+  width: 30%;
+  min-width: 400px;
+  margin: 10px 5px;
+  overflow: auto;
   display: block;
+  border: 1px solid maroon;
+  border-radius: 0.25rem;
+  text-align: center;
   > a {
     display: block;
-    background-color: #fff;
-    margin: 2.5rem;
-    padding: 5rem 5rem;
-    border: 1px solid rgba(0, 0, 0, 0.125);
-    ${'' /* border-top-width: 0; */}
+    padding: 2rem 2rem;
+    text-decoration: none;
+    color: black;
     &:hover {
       color: #fff;
       background-color: #bababa;
@@ -51,18 +44,5 @@ export const ListItemWithLink = styled.li`
       cursor: pointer;
     }
   }
-  ${'' /* &:first-of-type {
-    a {
-      border-top-width: 1px;
-      border-top-left-radius: 0.25rem;
-      border-top-right-radius: 0.25rem;
-    }
-  }
-  &:last-of-type {
-    a {
-      border-bottom-right-radius: 0.25rem;
-      border-bottom-left-radius: 0.25rem;
-    }
-  } */}
-
 `;
+

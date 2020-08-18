@@ -49,3 +49,10 @@ Search Form styling.
 .buttons > Button {
   margin: 0px 10px;
 }
+
+/* Clearfix */
+.clearfix {
+  content: "";
+  clear: both;
+  height: 1px;
+}

@@ -28,15 +28,16 @@ const Courts = (props) => {
   const renderCourts = (courts) => {
     return courts.map(({id, courtName, location, environment}) => (
 
-      <ListItemWithLink key={id}>
+      <ListItemWithLink key={id} className="ListItem">
         <Link to={`/court/${id}`}>
-          {courtName}<Badge>{environment}</Badge>
+          {courtName}
           <Location className="location">{location}</Location>
+          <Badge>{environment}</Badge>
         </Link>
       </ListItemWithLink>
     ));
   }
-  
+
   return(
     <List>{renderCourts(searchedPlants || data.courts)}</List>
   )
