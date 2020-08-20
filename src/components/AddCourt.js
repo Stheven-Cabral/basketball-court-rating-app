@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import {useMutation, gql} from '@apollo/client';
 import styled from '@emotion/styled';
 import CourtImage from '../assets/images/court.jpg';
+import { Button } from './shared/Form';
 
 const Background = styled.div`
   background-image: url(${CourtImage});
@@ -78,7 +79,7 @@ const AddCourt = () => {
           <option value="indoor">indoor</option>
           <option value="outdoor">outdoor</option>
         </select>
-        <input type="submit" value="Submit" />
+        <Button>Submit</Button>
       </Form>
     </Background>
   )
