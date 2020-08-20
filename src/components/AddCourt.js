@@ -20,6 +20,14 @@ const Form = styled.form`
   border-radius: 1rem;
 `;
 
+const Intro = styled.h4`
+  margin: auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: white;
+  font-weight: 100;
+  `;
+
 // courtName
 // location
 // backboardMaterial
@@ -29,6 +37,7 @@ const Form = styled.form`
 const AddCourt = () => {
   return(
     <Background>
+      <Intro>Add where you play..</Intro>
       <div className="clearfix"></div>
       <Form>
         <label for="court-name">Court Name:</label>
