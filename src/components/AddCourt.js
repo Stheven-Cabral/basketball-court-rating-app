@@ -31,15 +31,15 @@ const AddCourt = () => {
     <Background>
       <div className="clearfix"></div>
       <Form>
-        <label>Court Name:</label>
-        <input />
-        <label>Location:</label>
-        <input />
-        <label>Backboard Material:</label>
-        <input />
-        <label>Rim Type:</label>
-        <input />
-        <label>Environment:</label>
+        <label for="court-name">Court Name:</label>
+        <input name="court-name"/>
+        <label for="location">Location:</label>
+        <input name="location"/>
+        <label for="backboard-material">Backboard Material:</label>
+        <input name="backboard-material"/>
+        <label for="rim-type">Rim Type:</label>
+        <input name="rim-type"/>
+        <label for="environment">Environment:</label>
         <select name="environment" id="environment-type">
             <option value="indoor">indoor</option>
             <option value="outdoor">outdoor</option>
