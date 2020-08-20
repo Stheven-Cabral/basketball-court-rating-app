@@ -29,12 +29,6 @@ const Intro = styled.h4`
   font-weight: 100;
   `;
 
-// courtName
-// location
-// backboardMaterial
-// rimType
-// environment
-
 const ADD_COURT = gql`
   mutation MyMutation($courtName: String!, $location: String!, $backboardMaterial: String!, $rimType: String!, $environment: String!) {
     insert_courts(objects: {courtName: $courtName, location: $location, backboardMaterial: $backboardMaterial, rimType: $rimType, environment: $environment}) {
@@ -44,7 +38,7 @@ const ADD_COURT = gql`
 `;
 
 const AddCourt = () => {
-
+  const [addCourt] = useMutation(ADD_COURT);
   const [nameValue, setNameValue] = useState('');
   const [locationValue, setLocationValue] = useState('');
   const [backboardValue, setBackboardValue] = useState('');
