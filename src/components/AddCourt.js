@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {useMutation, gql} from '@apollo/client';
 import styled from '@emotion/styled';
 import CourtImage from '../assets/images/court.jpg';
 
@@ -34,7 +35,22 @@ const Intro = styled.h4`
 // rimType
 // environment
 
+const ADD_COURT = gql`
+  mutation MyMutation($courtName: String!, $location: String!, $backboardMaterial: String!, $rimType: String!, $environment: String!) {
+    insert_courts(objects: {courtName: $courtName, location: $location, backboardMaterial: $backboardMaterial, rimType: $rimType, environment: $environment}) {
+      affected_rows
+    }
+  }
+`;
+
 const AddCourt = () => {
+
+  const [nameValue, setNameValue] = useState('');
+  const [locationValue, setLocationValue] = useState('');
+  const [backboardValue, setBackboardValue] = useState('');
+  const [rimValue, setRimValue] = useState('');
+  const [environmentValue, setEnvironmentValue] = useState('');
+
   return(
     <Background>
       <Intro>Add where you play..</Intro>
