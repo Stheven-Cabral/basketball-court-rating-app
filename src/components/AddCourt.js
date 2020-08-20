@@ -37,12 +37,12 @@ const AddCourt = () => {
         <input name="location"/>
         <label for="backboard-material">Backboard Material:</label>
         <select name="backboard-material" id="backboard-material">
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
+          <option value="acrylic">acrylic</option>
+          <option value="aluminum">aluminum</option>
+          <option value="fiberglass">fiberglass</option>
+          <option value="steel">steel</option>
+          <option value="tempered glass">tempered glass</option>
+          <option value="wood">wood</option>
         </select>
         <label for="rim-type">Rim Type:</label>
         <select name="rim-type" id="rim-type">
