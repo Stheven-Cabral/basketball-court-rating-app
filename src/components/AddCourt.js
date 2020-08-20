@@ -36,14 +36,26 @@ const AddCourt = () => {
         <label for="location">Location:</label>
         <input name="location"/>
         <label for="backboard-material">Backboard Material:</label>
-        <input name="backboard-material"/>
+        <select name="backboard-material" id="backboard-material">
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+        </select>
         <label for="rim-type">Rim Type:</label>
-        <input name="rim-type"/>
+        <select name="rim-type" id="rim-type">
+          <option value="Breakaway Single Rim">Breakaway Single Rim</option>
+          <option value="Fixed Single Rim">Fixed Single Rim</option>
+          <option value="Breakaway Double Rim">Breakaway Double Rim</option>
+          <option value="Fixed Double Rim">Fixed Double Rim</option>
+        </select>
         <label for="environment">Environment:</label>
-        <select name="environment" id="environment-type">
-            <option value="indoor">indoor</option>
-            <option value="outdoor">outdoor</option>
-          </select>
+        <select name="environment" id="environment">
+          <option value="indoor">indoor</option>
+          <option value="outdoor">outdoor</option>
+        </select>
         <input type="submit" value="Submit" />
       </Form>
     </Background>
