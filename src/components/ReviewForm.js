@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "@emotion/styled";
-import { Input, Button, ReviewBackground } from './Form';
+import { Input, Button, ReviewBackground } from './shared/Form';
 
 export const Container = styled.div`
   display: flex;

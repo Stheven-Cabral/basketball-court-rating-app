@@ -18,12 +18,29 @@ const Form = styled.form`
   border-radius: 1rem;
 `;
 
+// courtName
+// location
+// backboardMaterial
+// rimType
+// environment
 
 const AddCourt = () => {
   return(
     <Background>
       <div className="clearfix"></div>
-      <Form></Form>
+      <Form>
+        <div>
+          <input />
+          <input />
+          <input />
+          <input />
+          <select name="environment" id="environment-type">
+            <option value="indoor">indoor</option>
+            <option value="outdoor">outdoor</option>
+          </select>
+          <input type="submit" value="Submit" />
+        </div>
+      </Form>
     </Background>
   )
 }

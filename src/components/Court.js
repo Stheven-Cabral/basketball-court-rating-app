@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import {useSubscription, useMutation, gql} from '@apollo/client';
 import {List, ListItem} from './shared/List';
 import {Badge} from './shared/Badge';
-import {ReviewForm} from './shared/ReviewForm';
+import {ReviewForm} from './ReviewForm';
 
 const COURT = gql`
   subscription Court($id: uuid!) {
