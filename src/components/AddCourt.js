@@ -9,6 +9,8 @@ const Background = styled.div`
 `;
 
 const Form = styled.form`
+  display: flex;
+  flex-direction: column;
   margin: auto;
   margin-top: 100px;
   background-color: white;
@@ -29,17 +31,20 @@ const AddCourt = () => {
     <Background>
       <div className="clearfix"></div>
       <Form>
-        <div>
-          <input />
-          <input />
-          <input />
-          <input />
-          <select name="environment" id="environment-type">
+        <label>Court Name:</label>
+        <input />
+        <label>Location:</label>
+        <input />
+        <label>Backboard Material:</label>
+        <input />
+        <label>Rim Type:</label>
+        <input />
+        <label>Environment:</label>
+        <select name="environment" id="environment-type">
             <option value="indoor">indoor</option>
             <option value="outdoor">outdoor</option>
           </select>
-          <input type="submit" value="Submit" />
-        </div>
+        <input type="submit" value="Submit" />
       </Form>
     </Background>
   )
