@@ -8,13 +8,16 @@ const Background = styled.div`
   background-image: url(${CourtImage});
   height: 100vh;
   width: 100vw;
+  display: flex;
+  flex-direction: column;
+  
 `;
 
 const Form = styled.form`
   display: flex;
   flex-direction: column;
   margin: auto;
-  margin-top: 100px;
+  margin-top: 35px;
   background-color: white;
   width: 500px;
   height: 600px;
@@ -24,7 +27,7 @@ const Form = styled.form`
 
 const Intro = styled.h4`
   margin: auto;
-  margin-top: 0px;
+  margin-top: 40px;
   margin-bottom: 0px;
   color: white;
   font-weight: 100;
