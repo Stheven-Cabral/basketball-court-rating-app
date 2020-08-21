@@ -25,7 +25,7 @@ const Form = styled.form`
   border-radius: 1rem;
 `;
 
-const Intro = styled.h4`
+const Intro = styled.h3`
   margin: auto;
   margin-top: 40px;
   margin-bottom: 0px;
@@ -53,7 +53,7 @@ const AddCourt = () => {
     <Background>
       <Intro>Add where you play..</Intro>
       <div className="clearfix"></div>
-      <Form>
+      <Form className="court-add">
         <label for="court-name">Court Name:</label>
         <input name="court-name"/>
         <label for="location">Location:</label>

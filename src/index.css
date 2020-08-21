@@ -50,6 +50,24 @@ Search Form styling.
   margin: 0px 10px;
 }
 
+/* 
+Styles for the Add Court form page.
+ */
+ label {
+   font-weight: 100;
+   font-size: 0.9em;
+   margin-top: 40px;
+   margin-left: 10px;
+ }
+
+ .court-add input,
+ .court-add select {
+  width: 95%;
+  height: 15%;
+  margin: auto;
+  font-size: 0.9em;
+ }
+
 /* Clearfix */
 .clearfix {
   content: "";
