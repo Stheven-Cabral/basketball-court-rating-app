@@ -20,14 +20,14 @@ const Form = styled.form`
   margin-top: 35px;
   background-color: white;
   width: 500px;
-  height: 600px;
+  height: auto;
   border: 1px solid maroon;
   border-radius: 1rem;
 `;
 
 const Intro = styled.h3`
   margin: auto;
-  margin-top: 40px;
+  margin-top: 30px;
   margin-bottom: 0px;
   color: white;
   font-weight: 100;
@@ -82,7 +82,7 @@ const AddCourt = () => {
           <option value="indoor">indoor</option>
           <option value="outdoor">outdoor</option>
         </select>
-        <Button>Submit</Button>
+        <Button className="addcourt-button">Submit</Button>
       </Form>
     </Background>
   )

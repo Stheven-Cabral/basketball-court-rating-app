@@ -41,7 +41,7 @@ export const Button = styled.button`
   font-family: 'Roboto Condensed', sans-serif;
   margin: auto;
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   color: #fff;
   background-color: #750000;
   border-color: #007bff;
