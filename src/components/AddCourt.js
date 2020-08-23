@@ -86,6 +86,17 @@ const AddCourt = () => {
       </Form>
     </Background>
   )
+
+  change = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+
+    this.setState(() => {
+      return {
+        [name]: value
+      };
+    });
+  }
 }
 
 export default AddCourt;
