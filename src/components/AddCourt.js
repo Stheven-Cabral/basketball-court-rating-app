@@ -54,7 +54,7 @@ const AddCourt = () => {
       <Intro>Add where you play..</Intro>
       <div className="clearfix"></div>
       <Form className="court-add" onSubmit = {() => {
-
+        addCourt();
       }}>
         <label for="court-name">Court Name:</label>
         <input name="court-name" onChange={(e) => setNameValue(e.target.value)}/>
