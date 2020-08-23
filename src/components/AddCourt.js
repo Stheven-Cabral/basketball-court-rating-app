@@ -53,11 +53,15 @@ const AddCourt = () => {
     <Background>
       <Intro>Add where you play..</Intro>
       <div className="clearfix"></div>
-      <Form className="court-add">
+      <Form className="court-add" onSubmit = {() => {
+
+      }}>
         <label for="court-name">Court Name:</label>
         <input name="court-name" onChange={(e) => setNameValue(e.target.value)}/>
+        
         <label for="location">Location:</label>
         <input name="location" onChange={(e) => setLocationValue(e.target.value)}/>
+        
         <label for="backboard-material">Backboard Material:</label>
         <select name="backboard-material" id="backboard-material" onChange={(e) => setBackboardValue(e.target.value)}>
           <option></option>
@@ -68,6 +72,7 @@ const AddCourt = () => {
           <option value="tempered glass">tempered glass</option>
           <option value="wood">wood</option>
         </select>
+        
         <label for="rim-type">Rim Type:</label>
         <select name="rim-type" id="rim-type" onChange={(e) => setRimValue(e.target.value)}>
           <option></option>
@@ -76,6 +81,7 @@ const AddCourt = () => {
           <option value="Breakaway Double Rim">Breakaway Double Rim</option>
           <option value="Fixed Double Rim">Fixed Double Rim</option>
         </select>
+        
         <label for="environment">Environment:</label>
         <select name="environment" id="environment" onChange={(e) => setEnvironmentValue(e.target.value)}>
           <option></option>
