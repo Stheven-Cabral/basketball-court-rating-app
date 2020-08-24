@@ -63,3 +63,19 @@ export const Button = styled.button`
     background-color: #0062cc;
   }
 `;
+
+export const TextArea = styled.textarea`
+  display: block;
+  margin: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  height: 100px;
+  width: 100%;
+  max-width: 600px;
+  background-color: #fff;
+  border: 0px;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+`;

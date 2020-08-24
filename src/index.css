@@ -32,10 +32,11 @@ Styling for navigation header.
 }
 
 /* 
-Search Form styling.
+Form styling.
  */
 
-.search-header {
+.search-header,
+.review-header {
   color: white;
   font-weight: 100;
   margin: 10px 0px;
