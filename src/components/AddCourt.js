@@ -53,8 +53,22 @@ const AddCourt = () => {
     <Background>
       <Intro>Add where you play..</Intro>
       <div className="clearfix"></div>
-      <Form className="court-add" onSubmit = {() => {
-        addCourt();
+      <Form className="court-add" 
+        onSubmit = {() => {
+          addCourt({ variables: {
+            courtName: nameValue,
+            location: locationValue,
+            backboardMaterial: backboardValue,
+            rimType: rimValue,
+            environment: environmentValue
+          }})
+          .then(() => 
+            setNameValue(""),
+            setLocationValue(""),
+            setBackboardValue(""),
+            setRimValue(""),
+            setEnvironmentValue("")
+          );
       }}>
         <label for="court-name">Court Name:</label>
         <input name="court-name" onChange={(e) => setNameValue(e.target.value)}/>
