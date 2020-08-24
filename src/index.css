@@ -74,3 +74,10 @@ Styles for the Add Court form page.
   clear: both;
   height: 1px;
 }
+
+/* Error Styling */
+.error-message {
+  text-align: center;
+  color: red;
+  font-weight: 100;
+}

@@ -56,7 +56,7 @@ const Court = (props) => {
         }}
         buttonText = "Submit"
       />
-      <h3 className="error-message">{errorMessage}</h3>
+      {errorMessage.length ? <h6 className="error-message">Error: {errorMessage}</h6> : <hr />}
       <List>
         <h3>
           {courtName} <Badge>{environment}</Badge>
