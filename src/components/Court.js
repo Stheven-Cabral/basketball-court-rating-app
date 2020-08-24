@@ -32,7 +32,8 @@ const ADD_REVIEW = gql`
 
 const Court = (props) => {
   const id = props.match.params.id;
-  const [inputValue, setInputValue] = useState('');  
+  const [inputValue, setInputValue] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');  
   const { loading, error, data } = useSubscription(COURT, {variables: { id }});
   const [addReview] = useMutation(ADD_REVIEW);
 
