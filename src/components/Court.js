@@ -49,13 +49,14 @@ const Court = (props) => {
         onChange = {(e) => {setInputValue(e.target.value)}}
         onSearch = {() => {
           addReview({ variables: { id: id, body: inputValue } })
-            .then(() => setInputValue(""))
+            .then(() => setInputValue(""), setErrorMessage(""))
             .catch((e) => {
-              setInputValue(e.message);
+              setErrorMessage(e.message);
           });
         }}
         buttonText = "Submit"
       />
+      <h3 className="error-message">{errorMessage}</h3>
       <List>
         <h3>
           {courtName} <Badge>{environment}</Badge>
