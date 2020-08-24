@@ -54,7 +54,8 @@ const AddCourt = () => {
       <Intro>Add where you play..</Intro>
       <div className="clearfix"></div>
       <Form className="court-add" 
-        onSubmit = {() => {
+        onSubmit = {(e) => {
+          e.preventDefault();
           addCourt({ variables: {
             courtName: nameValue,
             location: locationValue,
@@ -70,13 +71,13 @@ const AddCourt = () => {
             setEnvironmentValue("")
           );
       }}>
-        <label for="court-name">Court Name:</label>
+        <label htmlFor="court-name">Court Name:</label>
         <input name="court-name" onChange={(e) => setNameValue(e.target.value)}/>
         
-        <label for="location">Location:</label>
+        <label htmlFor="location">Location:</label>
         <input name="location" onChange={(e) => setLocationValue(e.target.value)}/>
         
-        <label for="backboard-material">Backboard Material:</label>
+        <label htmlFor="backboard-material">Backboard Material:</label>
         <select name="backboard-material" id="backboard-material" onChange={(e) => setBackboardValue(e.target.value)}>
           <option></option>
           <option value="acrylic">acrylic</option>
@@ -87,7 +88,7 @@ const AddCourt = () => {
           <option value="wood">wood</option>
         </select>
         
-        <label for="rim-type">Rim Type:</label>
+        <label htmlFor="rim-type">Rim Type:</label>
         <select name="rim-type" id="rim-type" onChange={(e) => setRimValue(e.target.value)}>
           <option></option>
           <option value="Breakaway Single Rim">Breakaway Single Rim</option>
@@ -96,7 +97,7 @@ const AddCourt = () => {
           <option value="Fixed Double Rim">Fixed Double Rim</option>
         </select>
         
-        <label for="environment">Environment:</label>
+        <label htmlFor="environment">Environment:</label>
         <select name="environment" id="environment" onChange={(e) => setEnvironmentValue(e.target.value)}>
           <option></option>
           <option value="indoor">indoor</option>
