@@ -13,7 +13,7 @@ export const Container = styled.div`
 export const ReviewForm = ({ inputValue, onChange, onSearch, buttonText }) => {
   return(
     <ReviewBackground>
-      <h3 className="review-header">Add a Review..</h3>
+      <h3 className="review-header">Add a Review.</h3>
       <TextArea value={inputValue} onChange={onChange} />
       <Button onClick={onSearch}>{buttonText}</Button>
     </ReviewBackground>
