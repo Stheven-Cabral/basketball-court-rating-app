@@ -70,6 +70,19 @@ p {
  }
 
  /* Styling for Court Review Page */
+ .court-info {
+  margin: 0;
+  margin-bottom: 20px;
+  color: whitesmoke;
+  font-size: 1.55em;
+  font-weight: 100;
+  text-shadow: 2px 2px 5px #1f1f1f;
+}
+
+#backboard,
+#rimtype {
+  font-size: 1.2em;
+}
 
 /* Clearfix */
 .clearfix {

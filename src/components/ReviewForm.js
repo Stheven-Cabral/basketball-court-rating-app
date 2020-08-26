@@ -5,7 +5,18 @@ import {Badge} from './shared/Badge';
 
 export const CourtInfo = styled.div`
   display: flex;
+  width: 40%;
   flex-direction: column;
+  border-right: 2px solid whitesmoke;
+`;
+
+export const ReviewFormSection = styled.div`
+  display: flex;
+  width: 40%;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  text-shadow: 2px 2px 5px #1f1f1f;
 `;
 
 export const ReviewForm = ({ courtData, inputValue, onChange, onSubmit, buttonText }) => {
@@ -19,14 +30,14 @@ export const ReviewForm = ({ courtData, inputValue, onChange, onSubmit, buttonTe
           {courtName} <Badge className="court-info">{environment}</Badge>
         </h3>
         <h4 className="court-info">{location}</h4>
-        <h5 className="court-info">{backboardMaterial}</h5>
-        <h5 className="court-info">{rimType}</h5>
+        <h5 className="court-info" id="backboard">Backboard: {backboardMaterial}</h5>
+        <h5 className="court-info" id="rimtype">Rim Type: {rimType}</h5>
       </CourtInfo>
-      <div>
-        <h3 className="review-header">Add a Review.</h3>
+      <ReviewFormSection>
+        <h4 className="review-header">Add a Review</h4>
         <TextArea value={inputValue} onChange={onChange} />
         <Button onClick={onSubmit}>{buttonText}</Button>
-      </div>
+      </ReviewFormSection>
     </ReviewBackground>
   )
 };
