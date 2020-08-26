@@ -52,6 +52,13 @@ Form styling.
 }
 
 /* 
+Styling for the search results.
+*/
+p {
+  text-align: center;
+}
+
+/* 
 Styles for the Add Court form page.
  */
  label {

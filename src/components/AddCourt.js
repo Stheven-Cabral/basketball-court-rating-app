@@ -51,7 +51,7 @@ const AddCourt = () => {
 
   return(
     <Background>
-      <Intro>Add where you play..</Intro>
+      <Intro>Add where you play.</Intro>
       <div className="clearfix"></div>
       <Form className="court-add" 
         onSubmit = {(e) => {
