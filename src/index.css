@@ -13,9 +13,7 @@ code {
     monospace;
 }
 
-/* 
-Styling for navigation header.
- */
+/* Styling for navigation header. */
 
 .navlogo {
   display: inline-block;
@@ -31,9 +29,7 @@ Styling for navigation header.
   text-shadow: 1px 1px 5px black;
 }
 
-/* 
-Form styling.
- */
+/* Form styling. */
 
 .search-header,
 .review-header {
@@ -51,16 +47,13 @@ Form styling.
   margin: 0px 10px;
 }
 
-/* 
-Styling for the search results.
-*/
+/* Styling for the search results. */
 p {
   text-align: center;
 }
 
-/* 
-Styles for the Add Court form page.
- */
+/* Styles for the Add Court form page. */
+
  label {
    font-weight: 100;
    font-size: 0.9em;
@@ -75,6 +68,8 @@ Styles for the Add Court form page.
   margin: auto;
   font-size: 0.9em;
  }
+
+ /* Styling for Court Review Page */
 
 /* Clearfix */
 .clearfix {

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import {useSubscription, useMutation, gql} from '@apollo/client';
 import {List, ListItem} from './shared/List';
-import {Badge} from './shared/Badge';
 import {ReviewForm} from './ReviewForm';
 
 const COURT = gql`
@@ -59,12 +58,6 @@ const Court = (props) => {
       />
       {errorMessage.length ? <h6 className="error-message">Error: {errorMessage}</h6> : <hr />}
       <List>
-        {/* <h3>
-          {courtName} <Badge>{environment}</Badge>
-        </h3>
-        <h4>{location}</h4>
-        <h5>{backboardMaterial}</h5>
-        <h5>{rimType}</h5> */}
         {court_reviews.map((review) => (
           <ListItem key={review.id}>{review.body}</ListItem>
         ))}

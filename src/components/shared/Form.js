@@ -16,9 +16,9 @@ export const ReviewBackground = styled.div`
   background-color: grey;
   height: 450px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 `;
 
 export const Input = styled.input`
