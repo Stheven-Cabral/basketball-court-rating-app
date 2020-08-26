@@ -39,15 +39,16 @@ const Court = (props) => {
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error...</p>;
-  
-  const { courtName, location, backboardMaterial, rimType, environment, court_reviews } = data.courts_by_pk;
 
+  const { court_reviews } = data.courts_by_pk;
+  
   return (
     <div>
       <ReviewForm 
+        courtData = {data.courts_by_pk}
         inputValue = {inputValue}
         onChange = {(e) => {setInputValue(e.target.value)}}
-        onSearch = {() => {
+        onSubmit = {() => {
           addReview({ variables: { id: id, body: inputValue } })
             .then(() => setInputValue(""), setErrorMessage(""))
             .catch((e) => {
@@ -58,12 +59,12 @@ const Court = (props) => {
       />
       {errorMessage.length ? <h6 className="error-message">Error: {errorMessage}</h6> : <hr />}
       <List>
-        <h3>
+        {/* <h3>
           {courtName} <Badge>{environment}</Badge>
         </h3>
         <h4>{location}</h4>
         <h5>{backboardMaterial}</h5>
-        <h5>{rimType}</h5>
+        <h5>{rimType}</h5> */}
         {court_reviews.map((review) => (
           <ListItem key={review.id}>{review.body}</ListItem>
         ))}

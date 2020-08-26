@@ -10,12 +10,18 @@ export const Container = styled.div`
   }
 `;
 
-export const ReviewForm = ({ inputValue, onChange, onSearch, buttonText }) => {
+export const ReviewForm = ({ courtData, inputValue, onChange, onSubmit, buttonText }) => {
+  
+  const { courtName, location, backboardMaterial, rimType, environment, court_reviews } = courtData;
+
   return(
     <ReviewBackground>
-      <h3 className="review-header">Add a Review.</h3>
-      <TextArea value={inputValue} onChange={onChange} />
-      <Button onClick={onSearch}>{buttonText}</Button>
+      <div></div>
+      <div>
+        <h3 className="review-header">Add a Review.</h3>
+        <TextArea value={inputValue} onChange={onChange} />
+        <Button onClick={onSubmit}>{buttonText}</Button>
+      </div>
     </ReviewBackground>
   )
 };
