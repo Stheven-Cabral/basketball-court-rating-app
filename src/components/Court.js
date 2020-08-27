@@ -40,6 +40,12 @@ const Court = (props) => {
   if (error) return <p>Error...</p>;
 
   const court_reviews  = data.courts_by_pk.court_reviews;
+  const extractDate = (createdat) => {
+    const month = createdat.slice(5, 7);
+    const day = createdat.slice(8, 10);
+    const year = createdat.slice(0, 4);
+    return `${month}-${day}-${year}`;
+  } 
   console.log(court_reviews);
   
   return (
@@ -62,7 +68,7 @@ const Court = (props) => {
       <List>
         {court_reviews.map((review) => (
           <ListItem key={review.id}>
-            <h6>Review Date: {review.created_at}</h6>
+            <h6>Review Date: {extractDate(review.created_at)}</h6>
             <div>{review.body}</div>
           </ListItem>
         ))}
