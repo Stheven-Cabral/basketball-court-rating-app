@@ -14,7 +14,8 @@ export const SearchBackground = styled.div`
 export const ReviewBackground = styled.div`
   background-image: url(${CourtImage});
   background-color: grey;
-  height: 450px;
+  height: auto;
+  padding: 50px;
   display: flex;
   flex-direction: row;
   align-items: center;
