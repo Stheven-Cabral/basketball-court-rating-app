@@ -93,6 +93,15 @@ p {
   text-align: center;
 }
 
+.review-date {
+  margin: 15px 0px;
+  font-weight: 100;
+}
+
+.review-body {
+  font-weight: 200;
+}
+
 /* Clearfix */
 .clearfix {
   content: "";

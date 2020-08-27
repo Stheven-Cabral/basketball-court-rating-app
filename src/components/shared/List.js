@@ -9,13 +9,12 @@ export const List = styled.ul`
 `;
 
 export const ListItem = styled.li`
+  width: 100%;
+  background-color: whitesmoke;
   display: block;
-  padding: 25px 30px;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  border-top-width: 0px;
-  border-radius: 0.25rem;
+  padding: 30px 50px;
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
   color: black;
-  list-style-type: none;
 `;
 
 export const Location = styled.p`
