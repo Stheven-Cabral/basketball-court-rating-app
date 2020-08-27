@@ -39,7 +39,8 @@ const Court = (props) => {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error...</p>;
 
-  const { court_reviews } = data.courts_by_pk;
+  const court_reviews  = data.courts_by_pk.court_reviews;
+  console.log(court_reviews);
   
   return (
     <div>
@@ -57,9 +58,13 @@ const Court = (props) => {
         buttonText = "Submit"
       />
       {errorMessage.length ? <h6 className="error-message">Error: {errorMessage}</h6> : <hr />}
+      <h4 className="reviews-header">Community Reviews</h4>
       <List>
         {court_reviews.map((review) => (
-          <ListItem key={review.id}>{review.body}</ListItem>
+          <ListItem key={review.id}>
+            <h6>Review Date: {review.created_at}</h6>
+            <div>{review.body}</div>
+          </ListItem>
         ))}
       </List>
     </div>
