@@ -10,9 +10,9 @@ export const List = styled.ul`
 
 export const ListItem = styled.li`
   width: 100%;
-  background-color: whitesmoke;
+  background-color: #fafafa;
   display: block;
-  padding: 30px 50px;
+  padding: 50px 75px;
   border-top: 1px solid rgba(0, 0, 0, 0.125);
   color: black;
 `;

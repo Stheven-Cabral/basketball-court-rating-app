@@ -63,7 +63,7 @@ const Court = (props) => {
         }}
         buttonText = "Submit"
       />
-      {errorMessage.length ? <h6 className="error-message">Error: {errorMessage}</h6> : <hr />}
+      { errorMessage.length ? <h6 className="error-message">Error: Cannot Submit a Blank Review</h6> : <hr />}
       <h3 className="reviews-header">Community Reviews</h3>
       <List>
         {court_reviews.map((review) => (
