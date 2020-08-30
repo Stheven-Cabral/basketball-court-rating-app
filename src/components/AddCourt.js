@@ -10,7 +10,6 @@ const Background = styled.div`
   width: 100vw;
   display: flex;
   flex-direction: column;
-  
 `;
 
 const Form = styled.form`
@@ -34,8 +33,8 @@ const Intro = styled.h3`
   `;
 
 const ADD_COURT = gql`
-  mutation MyMutation($courtName: String!, $location: String!, $backboardMaterial: String!, $rimType: String!, $environment: String!) {
-    insert_courts(objects: {courtName: $courtName, location: $location, backboardMaterial: $backboardMaterial, rimType: $rimType, environment: $environment}) {
+  mutation ($courtName: String!, $location: String!, $backboardMaterial: String!, $rimType: String!, $environment: String!) {
+    AddCourt(objects: {courtName: $courtName, location: $location, backboardMaterial: $backboardMaterial, rimType: $rimType, environment: $environment}) {
       affected_rows
     }
   }
@@ -55,8 +54,8 @@ const AddCourt = () => {
       <Intro>Add where you play</Intro>
       <div className="clearfix"></div>
       <Form className="court-add" 
-        onSubmit = {(e) => {
-          e.preventDefault();
+        onSubmit = {(event) => {
+          event.preventDefault();
           addCourt({ variables: {
             courtName: nameValue,
             location: locationValue,
@@ -70,10 +69,11 @@ const AddCourt = () => {
             setBackboardValue(""),
             setRimValue(""),
             setEnvironmentValue("")
-          ).catch((e) => {
+          )
+          .catch((e) => {
             console.log(e);
             setErrorMessage(e.message);
-          });
+          }); 
       }}>
         { errorMessage.length ? <h6 className="error-message">{errorMessage}</h6> : <span />}
         <label htmlFor="court-name">Court Name:</label>
