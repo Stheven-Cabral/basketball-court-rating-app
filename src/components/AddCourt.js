@@ -48,10 +48,11 @@ const AddCourt = () => {
   const [backboardValue, setBackboardValue] = useState('');
   const [rimValue, setRimValue] = useState('');
   const [environmentValue, setEnvironmentValue] = useState('');
+  const [errorMessage, setErrorMessage] = useState(''); 
 
   return(
     <Background>
-      <Intro>Add where you play.</Intro>
+      <Intro>Add where you play</Intro>
       <div className="clearfix"></div>
       <Form className="court-add" 
         onSubmit = {(e) => {
@@ -69,8 +70,12 @@ const AddCourt = () => {
             setBackboardValue(""),
             setRimValue(""),
             setEnvironmentValue("")
-          );
+          ).catch((e) => {
+            console.log(e);
+            setErrorMessage(e.message);
+          });
       }}>
+        { errorMessage.length ? <h6 className="error-message">{errorMessage}</h6> : <span />}
         <label htmlFor="court-name">Court Name:</label>
         <input name="court-name" onChange={(e) => setNameValue(e.target.value)}/>
         
