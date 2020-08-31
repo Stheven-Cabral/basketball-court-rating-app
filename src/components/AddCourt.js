@@ -55,7 +55,9 @@ const AddCourt = () => {
       <div className="clearfix"></div>
       <Form className="court-add" 
         onSubmit = {(event) => {
+          setErrorMessage([]);
           event.preventDefault();
+          console.log(errorMessage);
           addCourt({ variables: {
             courtName: nameValue,
             location: locationValue,
@@ -71,8 +73,7 @@ const AddCourt = () => {
             setEnvironmentValue("")
           )
           .catch((e) => {
-            setErrorMessage([]);
-            setErrorMessage(...errorMessage, e.message);
+            setErrorMessage([e.message]);
           });
       }}>
         <label htmlFor="court-name">Court Name:</label>
@@ -107,7 +108,7 @@ const AddCourt = () => {
           <option value="indoor">indoor</option>
           <option value="outdoor">outdoor</option>
         </select>
-        <h6 className="error-message">{errorMessage}</h6>
+        {errorMessage.length ? <h6 className="error-message">{errorMessage}</h6> : <span />}
         <Button className="addcourt-button">Submit</Button>
       </Form>
     </Background>
