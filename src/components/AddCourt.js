@@ -33,8 +33,8 @@ const Intro = styled.h3`
   `;
 
 const ADD_COURT = gql`
-  mutation ($courtName: String!, $location: String!, $backboardMaterial: String!, $rimType: String!, $environment: String!) {
-    AddCourt(objects: {courtName: $courtName, location: $location, backboardMaterial: $backboardMaterial, rimType: $rimType, environment: $environment}) {
+  mutation MyMutation ($courtName: String!, $location: String!, $backboardMaterial: String!, $rimType: String!, $environment: String!) {
+    AddCourt(courtName: $courtName, location: $location, backboardMaterial: $backboardMaterial, rimType: $rimType, environment: $environment) {
       affected_rows
     }
   }
@@ -55,7 +55,6 @@ const AddCourt = () => {
       <div className="clearfix"></div>
       <Form className="court-add" 
         onSubmit = {(event) => {
-          event.preventDefault();
           addCourt({ variables: {
             courtName: nameValue,
             location: locationValue,
@@ -72,8 +71,9 @@ const AddCourt = () => {
           )
           .catch((e) => {
             console.log(e);
-            setErrorMessage(e.message);
-          }); 
+            setErrorMessage(e);
+          });
+          event.preventDefault();
       }}>
         { errorMessage.length ? <h6 className="error-message">{errorMessage}</h6> : <span />}
         <label htmlFor="court-name">Court Name:</label>
