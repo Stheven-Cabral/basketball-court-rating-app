@@ -47,7 +47,7 @@ const AddCourt = () => {
   const [backboardValue, setBackboardValue] = useState('');
   const [rimValue, setRimValue] = useState('');
   const [environmentValue, setEnvironmentValue] = useState('');
-  const [errorMessage, setErrorMessage] = useState(''); 
+  const [errorMessage, setErrorMessage] = useState([]); 
 
   return(
     <Background>
@@ -55,6 +55,7 @@ const AddCourt = () => {
       <div className="clearfix"></div>
       <Form className="court-add" 
         onSubmit = {(event) => {
+          event.preventDefault();
           addCourt({ variables: {
             courtName: nameValue,
             location: locationValue,
@@ -70,12 +71,10 @@ const AddCourt = () => {
             setEnvironmentValue("")
           )
           .catch((e) => {
-            console.log(e);
-            setErrorMessage(e);
+            setErrorMessage([]);
+            setErrorMessage(...errorMessage, e.message);
           });
-          event.preventDefault();
       }}>
-        { errorMessage.length ? <h6 className="error-message">{errorMessage}</h6> : <span />}
         <label htmlFor="court-name">Court Name:</label>
         <input name="court-name" onChange={(e) => setNameValue(e.target.value)}/>
         
@@ -108,6 +107,7 @@ const AddCourt = () => {
           <option value="indoor">indoor</option>
           <option value="outdoor">outdoor</option>
         </select>
+        <h6 className="error-message">{errorMessage}</h6>
         <Button className="addcourt-button">Submit</Button>
       </Form>
     </Background>
