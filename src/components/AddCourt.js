@@ -108,7 +108,7 @@ const AddCourt = () => {
           <option value="indoor">indoor</option>
           <option value="outdoor">outdoor</option>
         </select>
-        {errorMessage.length ? <h6 className="error-message">{errorMessage}</h6> : <span />}
+        {errorMessage.length ? <h6 className="error-message">Error: {errorMessage}</h6> : <span />}
         <Button className="addcourt-button">Submit</Button>
       </Form>
     </Background>
