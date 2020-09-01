@@ -74,6 +74,15 @@ p {
   font-size: 0.9em;
  }
 
+ .success-message {
+  text-align: center;
+  margin: 5px 0px 0px;
+  font-family: 'Open Sans', sans-serif;
+  color: rgb(4, 155, 24);
+  font-weight: 900;
+  font-size: 0.9rem;
+ }
+
  /* Styling for Court Review Page */
  .court-info {
   margin: 0;

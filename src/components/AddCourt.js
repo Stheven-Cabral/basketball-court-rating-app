@@ -47,6 +47,7 @@ const AddCourt = () => {
   const [backboardValue, setBackboardValue] = useState('');
   const [rimValue, setRimValue] = useState('');
   const [environmentValue, setEnvironmentValue] = useState('');
+  const [successMessage, setSuccessMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState([]); 
 
   return(
@@ -55,9 +56,7 @@ const AddCourt = () => {
       <div className="clearfix"></div>
       <Form className="court-add" 
         onSubmit = {(event) => {
-          setErrorMessage([]);
           event.preventDefault();
-          console.log(errorMessage);
           addCourt({ variables: {
             courtName: nameValue,
             location: locationValue,
@@ -65,13 +64,16 @@ const AddCourt = () => {
             rimType: rimValue,
             environment: environmentValue
           }})
-          .then(() => 
-            setNameValue(""),
-            setLocationValue(""),
-            setBackboardValue(""),
-            setRimValue(""),
-            setEnvironmentValue("")
-          )
+          .then(() => {
+            setNameValue("");
+            setLocationValue("");
+            setBackboardValue("");
+            setRimValue("");
+            setEnvironmentValue("");
+            if (!errorMessage.length) {
+              setSuccessMessage("Court Added");
+            }
+          })
           .catch((e) => {
             setErrorMessage([e.message]);
           });
@@ -108,7 +110,7 @@ const AddCourt = () => {
           <option value="indoor">indoor</option>
           <option value="outdoor">outdoor</option>
         </select>
-        {errorMessage.length ? <h6 className="error-message">Error: {errorMessage}</h6> : <span />}
+        {errorMessage.length ? <h6 className="error-message">Error: {errorMessage}</h6> : <h6 className="success-message">{successMessage}</h6>}
         <Button className="addcourt-button">Submit</Button>
       </Form>
     </Background>
