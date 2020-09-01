@@ -55,8 +55,9 @@ const Court = (props) => {
         inputValue = {inputValue}
         onChange = {(e) => {setInputValue(e.target.value)}}
         onSubmit = {() => {
+          setErrorMessage("");
           addReview({ variables: { id: id, body: inputValue } })
-            .then(() => setInputValue(""), setErrorMessage(""))
+            .then(() => setInputValue(""))
             .catch((e) => {
               setErrorMessage(e.message);
           });

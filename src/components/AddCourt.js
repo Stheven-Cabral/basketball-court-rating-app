@@ -6,7 +6,7 @@ import { Button } from './shared/Form';
 
 const Background = styled.div`
   background-image: url(${CourtImage});
-  height: 100vh;
+  height: auto;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -17,6 +17,7 @@ const Form = styled.form`
   flex-direction: column;
   margin: auto;
   margin-top: 35px;
+  margin-bottom: 40px;
   background-color: white;
   width: 500px;
   height: auto;
@@ -50,6 +51,15 @@ const AddCourt = () => {
   const [successMessage, setSuccessMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState([]); 
 
+  function handleReset () {
+      Array.from(document.querySelectorAll("input")).forEach(
+        input => (input.value = "")
+      )
+      Array.from(document.querySelectorAll("select")).forEach(
+        input => (input.value = "")
+      )
+  };
+
   return(
     <Background>
       <Intro>Add where you play</Intro>
@@ -57,6 +67,7 @@ const AddCourt = () => {
       <Form className="court-add" 
         onSubmit = {(event) => {
           event.preventDefault();
+          setErrorMessage([]); 
           addCourt({ variables: {
             courtName: nameValue,
             location: locationValue,
@@ -65,6 +76,7 @@ const AddCourt = () => {
             environment: environmentValue
           }})
           .then(() => {
+            handleReset();
             setNameValue("");
             setLocationValue("");
             setBackboardValue("");

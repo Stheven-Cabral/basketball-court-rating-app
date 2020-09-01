@@ -34,7 +34,7 @@ hr {
   text-shadow: 1px 1px 5px black;
 }
 
-/* Form styling. */
+/* Search and Review Form styling. */
 
 .search-header,
 .review-header {
@@ -71,7 +71,9 @@ p {
   width: 95%;
   height: 15%;
   margin: auto;
-  font-size: 0.9em;
+  font-size: 0.7em;
+  padding: 5px 2px;
+  font-family: 'Open Sans', sans-serif;
  }
 
  .success-message {

@@ -35,6 +35,7 @@ export const Input = styled.input`
   background-color: #fff;
   border: 0px;
   font-size: 1.5rem;
+  font-family: 'Open Sans', sans-serif;
   line-height: 1.5rem;
 `;
 
@@ -77,6 +78,7 @@ export const TextArea = styled.textarea`
   max-width: 600px;
   background-color: #fff;
   border: 0px;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  font-family: 'Open Sans', sans-serif;
   line-height: 1.5rem;
 `;
