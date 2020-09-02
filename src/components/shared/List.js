@@ -43,5 +43,9 @@ export const ListItemWithLink = styled.li`
       cursor: pointer;
     }
   }
+  @media (max-width: 450px) {
+    width: 80%;
+    min-width: 100px;
+  }
 `;
 
