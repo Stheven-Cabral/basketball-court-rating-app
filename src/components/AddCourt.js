@@ -6,7 +6,8 @@ import { Button } from './shared/Form';
 
 const Background = styled.div`
   background-image: url(${CourtImage});
-  height: auto;
+  background-repeat: repeat-y;
+  height: 100%;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -16,13 +17,17 @@ const Form = styled.form`
   display: flex;
   flex-direction: column;
   margin: auto;
-  margin-top: 35px;
-  margin-bottom: 40px;
+  margin-top: 40px;
+  margin-bottom: 125px;
   background-color: white;
   width: 500px;
   height: auto;
   border: 1px solid maroon;
   border-radius: 1rem;
+  @media (max-width: 376px) {
+    width: 200px;
+    font-size: 3em;
+  }
 `;
 
 const Intro = styled.h3`
