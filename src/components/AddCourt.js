@@ -17,7 +17,7 @@ const Form = styled.form`
   display: flex;
   flex-direction: column;
   margin: auto;
-  margin-top: 40px;
+  margin-top: 35px;
   margin-bottom: 125px;
   background-color: white;
   width: 500px;
@@ -27,6 +27,7 @@ const Form = styled.form`
   @media (max-width: 570px) {
     width: 90%;
     font-size: .75em;
+    margin-top: 20px;
   }
 `;
 

@@ -64,6 +64,9 @@ export const Button = styled.button`
   &:active {
     background-color: #0062cc;
   }
+  @media (max-width: 570px) {
+    
+  }
 `;
 
 export const TextArea = styled.textarea`
