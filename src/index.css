@@ -146,4 +146,8 @@ p {
   .review-header {
     font-size: 1.5rem;
   }
+
+  .buttons {
+    flex-direction: column;
+  }
 }

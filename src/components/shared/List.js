@@ -17,6 +17,13 @@ export const ListItem = styled.li`
   color: black;
 `;
 
+export const Name = styled.p`
+  margin: 10px 0px;
+  @media (max-width: 450px) {
+    font-size: 0.8em;
+  }
+`;
+
 export const Location = styled.p`
   margin: 0px;
   font-size: 1rem;
