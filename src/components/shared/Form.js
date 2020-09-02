@@ -65,7 +65,7 @@ export const Button = styled.button`
     background-color: #0062cc;
   }
   @media (max-width: 570px) {
-    
+    font-size: 1.3rem;
   }
 `;
 
