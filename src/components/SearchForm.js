@@ -14,8 +14,7 @@ const SearchForm = (props) => {
   }
   return(
     <SearchBackground>
-      <h3 className="search-header">Find your next court
-      </h3>
+      <h3 className="search-header">Find your next court</h3>
       <Input value = {inputValue} onChange = {onChange} type="text" id="search" name="search"/>
       <div className="buttons">
         <Button onClick = {onSearch}>Search</Button>

@@ -6,6 +6,7 @@ import { Button } from './shared/Form';
 
 const Background = styled.div`
   background-image: url(${CourtImage});
+  background-position: center;
   background-repeat: repeat-y;
   height: 100%;
   width: 100vw;

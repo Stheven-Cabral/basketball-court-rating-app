@@ -140,4 +140,10 @@ p {
     font-size: 1.5em;
     margin-top: 2px;
   }
+
+  /* Search and Review Form Styling */
+  .search-header,
+  .review-header {
+    font-size: 1.5rem;
+  }
 }

@@ -3,6 +3,7 @@ import CourtImage from '../../assets/images/court.jpg';
 
 export const SearchBackground = styled.div`
   background-image: url(${CourtImage});
+  background-position: center;
   background-color: grey;
   height: 450px;
   display: flex;
@@ -13,6 +14,7 @@ export const SearchBackground = styled.div`
 
 export const ReviewBackground = styled.div`
   background-image: url(${CourtImage});
+  background-position: center;
   background-color: grey;
   height: auto;
   padding: 50px;
@@ -31,12 +33,15 @@ export const Input = styled.input`
   border-radius: 0.3rem;
   height: 45px;
   width: 100%;
-  max-width: 600px;
+  max-width: 545px;
   background-color: #fff;
   border: 0px;
   font-size: 1.5rem;
   font-family: 'Open Sans', sans-serif;
   line-height: 1.5rem;
+  @media (max-width: 570px) {
+    width: 75%;
+  }
 `;
 
 export const Button = styled.button`
