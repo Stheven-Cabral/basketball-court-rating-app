@@ -46,7 +46,6 @@ const Court = (props) => {
     const year = createdat.slice(0, 4);
     return `${month}-${day}-${year}`;
   } 
-  console.log(court_reviews);
   
   return (
     <div>
