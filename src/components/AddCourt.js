@@ -25,8 +25,8 @@ const Form = styled.form`
   border: 1px solid maroon;
   border-radius: 1rem;
   @media (max-width: 376px) {
-    width: 200px;
-    font-size: 3em;
+    width: 90%;
+    font-size: .75em;
   }
 `;
 
@@ -36,6 +36,10 @@ const Intro = styled.h3`
   margin-bottom: 0px;
   color: white;
   font-weight: 100;
+  @media (max-width: 376px) {
+    font-size: .80em;
+    margin-top: 25px;
+  }
   `;
 
 const ADD_COURT = gql`
