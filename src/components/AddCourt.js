@@ -24,7 +24,7 @@ const Form = styled.form`
   height: auto;
   border: 1px solid maroon;
   border-radius: 1rem;
-  @media (max-width: 376px) {
+  @media (max-width: 570px) {
     width: 90%;
     font-size: .75em;
   }
@@ -36,7 +36,7 @@ const Intro = styled.h3`
   margin-bottom: 0px;
   color: white;
   font-weight: 100;
-  @media (max-width: 376px) {
+  @media (max-width: 570px) {
     font-size: .80em;
     margin-top: 25px;
   }

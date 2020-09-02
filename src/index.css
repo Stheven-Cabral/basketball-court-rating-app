@@ -23,8 +23,8 @@ hr {
 .navlogo {
   display: inline-block;
   line-height: 70px;
-  margin-block-start: 0px;
-  margin-block-end: 0px;
+  /* margin-block-start: 0px;
+  margin-block-end: 0px; */
   margin-top: 15px;
   margin-bottom: 15px;
   vertical-align: middle;
@@ -129,4 +129,14 @@ p {
   color: red;
   font-weight: 900;
   font-size: 0.9rem;
+}
+
+
+/* STYLING FOR VIEWS WITH A WIDTH UP TO 570px */
+@media (max-width: 570px) {
+  
+  /* Styling for Navigation */
+  .navlogo {
+    font-size: 1.5em;
+  }
 }
