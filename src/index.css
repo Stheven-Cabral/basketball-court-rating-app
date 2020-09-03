@@ -131,6 +131,21 @@ p {
   font-size: 0.9rem;
 }
 
+/* STYLING FOR VIEWS WITH A WIDTH UP TO 570px */
+@media (max-width: 1080px) {
+  
+  /* Search and Review Form Styling */
+  .court-info {
+    font-size: 1.1em;
+  }
+
+  #backboard,
+#rimtype {
+  font-size: 0.9em;
+}
+}
+
+
 
 /* STYLING FOR VIEWS WITH A WIDTH UP TO 570px */
 @media (max-width: 570px) {
@@ -149,7 +164,7 @@ p {
 }
 
 
-/* STYLING FOR VIEWS WITH A WIDTH UP TO 570px */
+/* STYLING FOR VIEWS WITH A WIDTH UP TO 450px */
 @media (max-width: 450px) {
 
   /* Search and Review Form Styling */
