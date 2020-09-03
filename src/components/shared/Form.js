@@ -33,7 +33,7 @@ export const Input = styled.input`
   border-radius: 0.3rem;
   height: 45px;
   width: 100%;
-  max-width: 545px;
+  max-width: 540px;
   background-color: #fff;
   border: 0px;
   font-size: 1.5rem;
@@ -71,6 +71,11 @@ export const Button = styled.button`
   }
   @media (max-width: 570px) {
     font-size: 1.3rem;
+  }
+  @media (max-width: 450px) {
+    font-size: 1.2rem;
+    height: 45px;
+    width: 150px;
   }
 `;
 

@@ -146,8 +146,18 @@ p {
   .review-header {
     font-size: 1.5rem;
   }
+}
 
+
+/* STYLING FOR VIEWS WITH A WIDTH UP TO 570px */
+@media (max-width: 450px) {
+
+  /* Search and Review Form Styling */
   .buttons {
     flex-direction: column;
+  }
+
+  .buttons > Button {
+    margin: 5px 0px;
   }
 }
