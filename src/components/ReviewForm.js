@@ -8,6 +8,11 @@ export const CourtInfo = styled.div`
   width: 40%;
   flex-direction: column;
   border-right: 2px solid whitesmoke;
+  @media (max-width: 570px) {
+    width: 90%;
+    border-right: none;
+    border-bottom: 2px solid whitesmoke;
+  }
 `;
 
 export const ReviewFormSection = styled.div`

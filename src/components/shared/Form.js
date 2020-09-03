@@ -22,6 +22,11 @@ export const ReviewBackground = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+  @media (max-width: 570px) {
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px;
+  }
 `;
 
 export const Input = styled.input`
