@@ -41,6 +41,7 @@ hr {
   color: white;
   font-weight: 100;
   margin: 10px 0px;
+  text-shadow: none;
 }
 
 .buttons {
@@ -89,7 +90,6 @@ p {
  .court-info {
   margin: 0;
   margin-bottom: 20px;
-  margin-right: 20px;
   color: whitesmoke;
   font-size: 1.55em;
   font-weight: 100;
@@ -106,6 +106,7 @@ p {
 }
 
 .review-date {
+  font-family: 'Roboto Condensed', sans-serif;
   margin: 15px 0px;
   font-weight: 100;
 }

@@ -15,6 +15,7 @@ export const ListItem = styled.li`
   padding: 50px 75px;
   border-top: 1px solid rgba(0, 0, 0, 0.125);
   color: black;
+  font-family: 'Open Sans', sans-serif;
 `;
 
 export const Name = styled.p`
