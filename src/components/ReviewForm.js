@@ -27,6 +27,11 @@ export const ReviewFormSection = styled.div`
   @media (max-width: 600px) {
     width: 90%;
   }
+  @media (max-width: 450px) {
+    > button {
+      margin-top: 0px;
+    }
+  }
 `;
 
 export const ReviewForm = ({ courtData, inputValue, onChange, onSubmit, buttonText }) => {

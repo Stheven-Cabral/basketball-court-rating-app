@@ -12,4 +12,8 @@ export const Badge = styled.div`
   vertical-align: middle;
   border-radius: 0.5rem;
   background-color: maroon;
+  @media (max-width: 450px) {
+    font-size: 0.82rem;
+    font-weight: 100;
+  }
 `;

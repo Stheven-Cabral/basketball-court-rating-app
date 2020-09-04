@@ -6,7 +6,7 @@ const NavBar = styled.div`
   height: 100px;
   background-color: marshmellow;
   text-align: center;
-  @media (max-width: 570px) {
+  @media (max-width: 600px) {
     height: 75px;
   }
 `;

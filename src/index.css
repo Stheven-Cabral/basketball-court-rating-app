@@ -179,6 +179,12 @@ p {
   }
 }
 
+/* STYLING FOR VIEWS WITH A WIDTH OVER TO 600px */
+@media (min-width: 600px) {
+  .court-info {
+    margin-right: 20px;
+  }
+}
 
 /* STYLING FOR VIEWS WITH A WIDTH UP TO 600px */
 @media (max-width: 600px) {
@@ -194,10 +200,6 @@ p {
   .review-header {
     font-size: 1.5rem;
   }
-
-  .review-header {
-    margin-top: 20px;
-  }
 }
 
 
@@ -205,6 +207,20 @@ p {
 @media (max-width: 450px) {
 
   /* Search and Review Form Styling */
+  .court-info {
+    font-size: 0.85em;
+  }
+
+  #backboard,
+  #rimtype {
+    font-size: 0.70em;
+  }
+
+  .search-header,
+  .review-header {
+    font-size: 1.25rem;
+  }
+
   .buttons {
     flex-direction: column;
   }

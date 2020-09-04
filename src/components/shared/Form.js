@@ -81,9 +81,9 @@ export const Button = styled.button`
     font-size: 1.3rem;
   }
   @media (max-width: 450px) {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     height: 40px;
-    width: 145px;
+    width: 140px;
   }
 `;
 
