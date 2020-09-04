@@ -8,10 +8,12 @@ export const CourtInfo = styled.div`
   width: 40%;
   flex-direction: column;
   border-right: 2px solid whitesmoke;
-  @media (max-width: 570px) {
+  @media (max-width: 600px) {
     width: 90%;
+    margin: 30px 0px;
     border-right: none;
     border-bottom: 2px solid whitesmoke;
+    text-align: center;
   }
 `;
 
@@ -22,6 +24,9 @@ export const ReviewFormSection = styled.div`
   justify-content: center;
   text-align: center;
   text-shadow: 2px 2px 5px #1f1f1f;
+  @media (max-width: 600px) {
+    width: 90%;
+  }
 `;
 
 export const ReviewForm = ({ courtData, inputValue, onChange, onSubmit, buttonText }) => {

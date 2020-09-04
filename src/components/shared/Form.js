@@ -22,7 +22,10 @@ export const ReviewBackground = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  @media (max-width: 570px) {
+  @media (max-width: 1200px) {
+    padding: 25px;
+  }
+  @media (max-width: 600px) {
     flex-direction: column;
     justify-content: center;
     padding: 0px;
@@ -74,24 +77,24 @@ export const Button = styled.button`
   &:active {
     background-color: #0062cc;
   }
-  @media (max-width: 570px) {
+  @media (max-width: 845px) {
     font-size: 1.3rem;
   }
   @media (max-width: 450px) {
     font-size: 1.2rem;
-    height: 45px;
-    width: 150px;
+    height: 40px;
+    width: 145px;
   }
 `;
 
 export const TextArea = styled.textarea`
   display: block;
   margin: auto;
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-bottom: 2rem;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0rem;
   border-radius: 0.3rem;
-  height: 100px;
+  height: 110px;
   width: 100%;
   max-width: 600px;
   background-color: #fff;
@@ -99,4 +102,7 @@ export const TextArea = styled.textarea`
   font-size: 1.3rem;
   font-family: 'Open Sans', sans-serif;
   line-height: 1.5rem;
+  @media (max-width: 845px) {
+    font-size: 1.1rem;
+  }
 `;
