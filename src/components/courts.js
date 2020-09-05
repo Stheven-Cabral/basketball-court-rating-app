@@ -20,10 +20,10 @@ const COURTS = gql`
 
 const Courts = (props) => {
   const { loading, error, data } = useQuery(COURTS);
-  const searchedPlants = props.searchedPlanets;
+  const searchedCourts = props.searchedCourts;
 
   if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error :(</p>;
+  if (error) return <p>Error</p>;
 
   const renderCourts = (courts) => {
     return courts.map(({id, courtName, location, environment}) => (
@@ -39,7 +39,7 @@ const Courts = (props) => {
   }
 
   return(
-    <List>{renderCourts(searchedPlants || data.courts)}</List>
+    <List>{renderCourts(searchedCourts || data.courts)}</List>
   )
 }
 
