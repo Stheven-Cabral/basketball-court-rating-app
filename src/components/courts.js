@@ -18,7 +18,7 @@ const COURTS = gql`
   }
 `;
 
-const Courts = (props) => {
+export const Courts = (props) => {
   const { loading, error, data } = useQuery(COURTS);
   const searchedCourts = props.searchedCourts;
 
@@ -42,5 +42,3 @@ const Courts = (props) => {
     <List>{renderCourts(searchedCourts || data.courts)}</List>
   )
 }
-
-export default Courts;
