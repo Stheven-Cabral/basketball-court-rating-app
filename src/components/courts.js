@@ -18,6 +18,7 @@ const SEARCH_COURTS = gql`
   }
 `;
 
+// List of Courts data
 export const Courts = (props) => {
   const { loading, error, data } = useQuery(SEARCH_COURTS);
   const searchedCourts = props.searchedCourts;
