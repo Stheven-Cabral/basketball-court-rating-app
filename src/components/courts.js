@@ -5,7 +5,7 @@ import { Badge } from './shared/Badge';
 import { List, ListItemWithLink, Name, Location } from './shared/List'; 
 
 // In the case of GraphQL, the gql tag is used to surround GraphQL operation and schema language (which are represented as Strings or template literals), and makes it easier to differentiate from ordinary strings.
-const COURTS = gql`
+const SEARCH_COURTS = gql`
   {
     courts {
       id
@@ -19,7 +19,7 @@ const COURTS = gql`
 `;
 
 export const Courts = (props) => {
-  const { loading, error, data } = useQuery(COURTS);
+  const { loading, error, data } = useQuery(SEARCH_COURTS);
   const searchedCourts = props.searchedCourts;
 
   if (loading) return <p>Loading...</p>;
