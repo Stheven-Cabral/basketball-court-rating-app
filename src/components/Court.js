@@ -3,6 +3,7 @@ import {useSubscription, useMutation, gql} from '@apollo/client';
 import {List, ListItem} from './shared/List';
 import {ReviewForm} from './ReviewForm';
 
+// The `COURT` subscription allows reviews to update automatically upon review submittal.
 const COURT = gql`
   subscription Court($id: uuid!) {
     courts_by_pk(id: $id) {
@@ -21,6 +22,7 @@ const COURT = gql`
   }
 `;
 
+// The `ADD_REVIEW` mutation updates the database with valid submitted reviews.
 const ADD_REVIEW = gql`
   mutation MyMutation ($body: String!, $id: uuid!) {
     AddReview(body: $body, id: $id) {
@@ -40,6 +42,8 @@ const Court = (props) => {
   if (error) return <p>Error...</p>;
 
   const court_reviews  = data.courts_by_pk.court_reviews;
+  
+  // `extractDate` function extracts review dates from the subcribed data.
   const extractDate = (createdat) => {
     const month = createdat.slice(5, 7);
     const day = createdat.slice(8, 10);

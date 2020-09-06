@@ -3,6 +3,7 @@ import { useLazyQuery, gql } from '@apollo/client';
 import SearchForm from './SearchForm';
 import { Courts } from './courts';
 
+// `SEARCH` query string returns a court that contains any keywords from the search input.
 const SEARCH = gql`
   query Search ($match: String) {
     courts(where: {courtName: {_ilike: $match}}, order_by: {courtName: asc}) {
