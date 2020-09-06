@@ -15,7 +15,7 @@ const httpLink = new HttpLink({
 
 // Create web sockets for subscriptions.
 const wsLink = new WebSocketLink({
-  uri: `ws://basketball-court-rating-app.herokuapp.com/v1/graphql`,
+  uri: `wss://basketball-court-rating-app.herokuapp.com/v1/graphql`,
   options: {
     reconnect: true
   }
