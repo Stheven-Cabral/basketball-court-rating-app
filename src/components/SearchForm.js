@@ -8,8 +8,8 @@ const SearchForm = (props) => {
   const onSearch = props.onSearch;
   let history = useHistory();
 
+  // `newCourt` function redirects to the '/courts/new' endpoint.
   function newCourt() {
-    console.log(history);
     history.push('courts/new');
   }
   return(
