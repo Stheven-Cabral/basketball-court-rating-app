@@ -42,8 +42,9 @@ const Intro = styled.h3`
     font-size: .80em;
     margin-top: 25px;
   }
-  `;
+`;
 
+// `ADD_COURT` mutation adds a court to the database when the add court form is submitted.
 const ADD_COURT = gql`
   mutation MyMutation ($courtName: String!, $location: String!, $backboardMaterial: String!, $rimType: String!, $environment: String!) {
     AddCourt(courtName: $courtName, location: $location, backboardMaterial: $backboardMaterial, rimType: $rimType, environment: $environment) {
@@ -62,6 +63,7 @@ const AddCourt = () => {
   const [successMessage, setSuccessMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState([]); 
 
+  // `handleReset` function resets 'input' and 'select' elements.
   function handleReset () {
       Array.from(document.querySelectorAll("input")).forEach(
         input => (input.value = "")
@@ -77,6 +79,7 @@ const AddCourt = () => {
       <div className="clearfix"></div>
       <Form className="court-add" 
         onSubmit = {(event) => {
+          // On submit, the `addCourt` mmutation is called.
           event.preventDefault();
           setErrorMessage([]); 
           addCourt({ variables: {
@@ -86,6 +89,7 @@ const AddCourt = () => {
             rimType: rimValue,
             environment: environmentValue
           }})
+          // The following code resets state properties for input and select form fields and sets the `successMessage` state property when no errors occur.
           .then(() => {
             handleReset();
             setNameValue("");
@@ -97,6 +101,7 @@ const AddCourt = () => {
               setSuccessMessage("Court Added");
             }
           })
+          // Sets the `successMessage` state property when errors occur.
           .catch((e) => {
             setErrorMessage([e.message]);
           });

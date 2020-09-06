@@ -1,3 +1,5 @@
+// Styling for lists of Courts and lists of reviews
+
 import styled from "@emotion/styled";
 
 export const List = styled.ul`

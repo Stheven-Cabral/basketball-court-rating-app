@@ -1,3 +1,5 @@
+// Styling for 'environment' data
+
 import styled from "@emotion/styled";
 
 export const Badge = styled.div`
