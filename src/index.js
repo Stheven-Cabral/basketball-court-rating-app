@@ -14,7 +14,7 @@ const httpLink = new HttpLink({
 });
 
 
-// Create web sockets for subscriptions.
+// WEbSocketLink allows the application to send sucription requests over WebSockets to the provided Hasura graphQL link.
 const wsLink = new WebSocketLink({
   uri: `wss://basketball-court-rating-app.herokuapp.com/v1/graphql`,
   options: {
@@ -23,7 +23,7 @@ const wsLink = new WebSocketLink({
 });
 
 
-// splitLink method to split connections between subscriptions vs queries and mutations.
+// The splitLink method allows the application to split connections between `httpLink` and `wsLink`.
 const splitLink = split(
   ({ query }) => {
     const definition = getMainDefinition(query);
@@ -37,13 +37,14 @@ const splitLink = split(
 );
 
 
-//The constructor for ApolloClient accepts an ApolloClientOptions object that supports the required and optional fields listed below. These fields make it easy to customize how Apollo works based on your application's needs. (https://www.apollographql.com/docs/react/api/apollo-client/#gatsby-focus-wrapper)
+//The constructor for ApolloClient accepts an ApolloClientOptions object that supports the required and optional fields listed below. 
+// These fields make it easy to customize how Apollo works based on your application's needs. (https://www.apollographql.com/docs/react/api/apollo-client/#gatsby-focus-wrapper)
 const client = new ApolloClient({
-  //Caching is the term for storing reusable responses in order to make subsequent requests faster. ... Subsequent requests for cached content can then be fulfilled from a cache closer to the user instead of sending the request all the way back to the web server.
   cache: new InMemoryCache(),
   link: splitLink
 });
 
+// `ApolloProvider`component wraps to the `App` component to provide sub components with `client` prop.
 ReactDOM.render(
   <ApolloProvider client={client}>
     <App />
