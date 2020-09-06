@@ -17,7 +17,7 @@ export const CourtInfo = styled.div`
   }
 `;
 
-export const ReviewFormSection = styled.div`
+export const ReviewInput = styled.div`
   display: flex;
   width: 40%;
   flex-direction: column;
@@ -48,11 +48,11 @@ export const ReviewForm = ({ courtData, inputValue, onChange, onSubmit, buttonTe
         <h5 className="court-info" id="backboard">Backboard: {backboardMaterial}</h5>
         <h5 className="court-info" id="rimtype">Rim Type: {rimType}</h5>
       </CourtInfo>
-      <ReviewFormSection>
+      <ReviewInput>
         <h4 className="review-header">Add a Review</h4>
         <TextArea value={inputValue} onChange={onChange} />
         <Button onClick={onSubmit}>{buttonText}</Button>
-      </ReviewFormSection>
+      </ReviewInput>
     </ReviewBackground>
   )
 };
