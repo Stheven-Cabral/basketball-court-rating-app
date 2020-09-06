@@ -7,7 +7,8 @@ import { WebSocketLink } from '@apollo/client/link/ws';
 import App from './App';
 
 
-//By default, Apollo Client uses Apollo Link's HttpLink to send GraphQL operations to a remote server over HTTP. Apollo Client takes care of creating this default link.
+// By default, Apollo Client uses Apollo Link's HttpLink to send GraphQL operations to the Hasura graphQL engine over HTTP. 
+// The Hasura graphQL enginer takes care of creating this default link.
 const httpLink = new HttpLink({
   uri: `https://basketball-court-rating-app.herokuapp.com/v1/graphql`,
 });
