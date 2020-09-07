@@ -1,6 +1,6 @@
-<h2>Project: Basketball Court Review Application</h2>
+<h2>Project: Basketball Court Review Website</h2>
 
-<h3>A review applications that allows users to search for courts by name, add a court to the database, and add court reviews.</h3>
+<h3>A review website that allows users to search for courts by name, add a court to the database, and add court reviews.</h3>
 
 Application Link: https://hoop-up.netlify.app/
 
