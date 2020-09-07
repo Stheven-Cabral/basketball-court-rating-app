@@ -1,4 +1,4 @@
-###Project: Basketball Court Review Application
+<h2>Project: Basketball Court Review Application</h2>
 
 <h3>A review applications that allows users to search for courts by name, add a court to the database, and add court reviews.</h3>
 
